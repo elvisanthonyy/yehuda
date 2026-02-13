@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import dbConnect from "@/libs/dbConnection";
 import { Beat } from "@/models/beat";
 
-const handler = async (req: Request) => {
+const handler = async () => {
   await dbConnect();
 
   try {
