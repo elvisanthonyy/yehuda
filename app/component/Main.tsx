@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { useRef, useEffect, useState } from "react";
 import api from "@/libs/api";
 import { IBeat } from "@/models/beat";
@@ -44,38 +43,38 @@ function useScrollAnimation() {
 }
 
 const Main = () => {
-  const item1 = useScrollAnimation();
+  //const item1 = useScrollAnimation();
   const item2 = useScrollAnimation();
-  const item3 = useScrollAnimation();
+  //const item3 = useScrollAnimation();
   const item4 = useScrollAnimation();
   const item5 = useScrollAnimation();
-  const item6 = useScrollAnimation();
-  const item7 = useScrollAnimation();
-  const item8 = useScrollAnimation();
-  const item9 = useScrollAnimation();
+  //const item6 = useScrollAnimation();
+  //const item7 = useScrollAnimation();
+  //const item8 = useScrollAnimation();
+  //const item9 = useScrollAnimation();
 
   const hireMeRef = useRef<HTMLDivElement>(null);
   const projectRef = useRef<HTMLDivElement>(null);
   const topRef = useRef<HTMLDivElement>(null);
-  const [isButtonsVisible, setIsButtonVisble] = useState(false);
+  //const [isButtonsVisible, setIsButtonVisble] = useState(false);
   const [beats, setBeats] = useState<IBeat[] | []>([]);
   const [isMusicPlayerOpen, setIsMusicPlayerOpen] = useState(false);
   const [beat, setBeat] = useState<IBeat | null>(null);
 
-  const handleScrollToProject = () => {
+  /*const handleScrollToProject = () => {
     projectRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleScrollToHireMe = () => {
     hireMeRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  };*/
 
   const handleScrollToTop = () => {
     topRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
-    setIsButtonVisble(true);
+    //setIsButtonVisble(true);
     api
       .get("/api/get/beats")
       .then((res) => {
@@ -100,11 +99,11 @@ const Main = () => {
           </div>
           <div className="flex flex-col items-center h-40 mt-13 px-5 border-gray-500">
             <div className="fex w-full mb-3">
-              Hello, I'm <b>Yehuda</b>
+              Hello, I&apos;m <b>Yehuda</b>
             </div>
             <div>
-              I'm a Music Producer, I specialize in creating catchy afrobeats
-              and mix/ mastering
+              I&apos;m a Music Producer, I specialize in creating catchy
+              afrobeats and mix/ mastering
             </div>
             <div className="flex mt-5 mb-6 w-full justify-between items-center">
               <IoMdGlobe />

@@ -12,8 +12,8 @@ interface ChildProps {
 const MusicPlayer = ({ beat, setIsMusiPlayerOpen }: ChildProps) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [musicLoading, setMusicLoading] = useState(false);
-  const [isBuffering, setIsBuffering] = useState(false);
+  //const [musicLoading, setMusicLoading] = useState(false);
+  //const [isBuffering, setIsBuffering] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
 
@@ -43,9 +43,7 @@ const MusicPlayer = ({ beat, setIsMusiPlayerOpen }: ChildProps) => {
         setIsPlaying(true);
         audioRef.current.play();
       } else {
-        setMusicLoading(true);
         audioRef.current.play();
-        setMusicLoading(false);
       }
     }
 
@@ -101,13 +99,7 @@ const MusicPlayer = ({ beat, setIsMusiPlayerOpen }: ChildProps) => {
       </div>
       <div className="z-40 flex items-center flex-col py-5 absolute top-[50%] left-[50%] -translate-[50%] w-[90%] flex mx-auto">
         {beat && (
-          <audio
-            ref={audioRef}
-            src={beat.audioUrl}
-            preload="metadata"
-            onWaiting={() => setIsBuffering(true)}
-            onPlaying={() => setIsBuffering(false)}
-          />
+          <audio ref={audioRef} src={beat.audioUrl} preload="metadata" />
         )}
 
         <div className="w-full flex flex-col items-center z-40 mt-3">
