@@ -100,7 +100,7 @@ const Main = () => {
           </div>
           <div className="flex flex-col items-center h-40 mt-13 px-5 border-gray-500">
             <div className="fex w-full mb-3">
-              Hello, I&apos;m <b>Yehuda</b>
+              Hello, I&apos;m <b>BeatsByYehuda</b>
             </div>
             <div>
               I&apos;m a Music Producer, I specialize in creating catchy
