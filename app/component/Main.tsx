@@ -184,7 +184,7 @@ const Main = () => {
             item4.isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10"
-          } aspect-square text-sm w-full border-b-1 border-t-1 mx-auto flex flex-col justify-center py-10 md:h-80 items-center border-b-gray-400 border-t-gray-400`}
+          } aspect-square text-sm w-full border-b border-t mx-auto flex flex-col justify-center py-10 md:h-80 items-center border-b-gray-400 border-t-gray-400`}
         >
           <div className="flex flex-col mx-auto mb-5">CONTACT</div>
           <div className="flex my-2 items-center w-[90%]">
