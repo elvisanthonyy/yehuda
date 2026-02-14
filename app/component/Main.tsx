@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
+import Image from "next/image";
 import api from "@/libs/api";
 import { IBeat } from "@/models/beat";
 import {
@@ -125,11 +126,29 @@ const Main = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <div className="w-full flex items-center justify-center rounded-xl aspect-square bg-blue-400 mb-5">
-              <div className="text-2xl text-white -rotate-10">Afro</div>
+            <div className="w-full overflow-hidden flex items-center justify-center rounded-xl aspect-square bg-blue-400 mb-5">
+              <div className="text-2xl w-full h-full text-white ">
+                <Image
+                  src={"/genres/afro1.jfif"}
+                  height={1000}
+                  width={1000}
+                  draggable={false}
+                  alt="afro"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
-            <div className="w-full flex items-center justify-center rounded-xl aspect-square bg-green-400">
-              <div className="text-2xl text-white -rotate-10">Afro Fusion</div>
+            <div className="w-full flex overflow-hidden items-center justify-center rounded-xl aspect-square bg-green-400">
+              <div className="text-2xl w-full h-full text-white">
+                <Image
+                  src={"/genres/afro2.jfif"}
+                  height={1000}
+                  width={1000}
+                  draggable={false}
+                  alt="afro"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
