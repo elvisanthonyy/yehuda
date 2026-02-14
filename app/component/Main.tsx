@@ -129,7 +129,7 @@ const Main = () => {
             <div className="w-full overflow-hidden flex items-center justify-center rounded-xl aspect-square bg-blue-400 mb-5">
               <div className="text-2xl w-full h-full text-white ">
                 <Image
-                  src={"/genres/afro1.jfif"}
+                  src={"/genres/afro1.jpg"}
                   height={1000}
                   width={1000}
                   draggable={false}
@@ -141,7 +141,7 @@ const Main = () => {
             <div className="w-full flex overflow-hidden items-center justify-center rounded-xl aspect-square bg-green-400">
               <div className="text-2xl w-full h-full text-white">
                 <Image
-                  src={"/genres/afro2.jfif"}
+                  src={"/genres/afro2.jpg"}
                   height={1000}
                   width={1000}
                   draggable={false}
