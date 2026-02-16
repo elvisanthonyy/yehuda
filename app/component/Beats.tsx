@@ -19,7 +19,7 @@ const Beats = ({ beat }: ChildProps) => {
           alt="back image"
         />
       </div>
-      <div className="absolute w-20 h-20 py-3 border border-white rounded-xl backdrop-blur-2xl flex flex-col bg-white/10 items-center z-40 top-[50%] left-[50%] -translate-[50%]">
+      <div className="flex text-xl text-white justify-center items-center absolute w-20 h-20 py-3 border border-white rounded-xl backdrop-blur-2xl flex flex-col bg-white/10 items-center z-40 top-[50%] left-[50%] -translate-[50%]">
         <FaPlay />
       </div>
       <div className="absolute w-[80%] py-3 border border-white rounded-xl backdrop-blur-2xl flex flex-col bg-white/10 items-center z-40 bottom-10 left-[50%] -translate-x-[50%]">
