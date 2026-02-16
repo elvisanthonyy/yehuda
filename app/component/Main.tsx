@@ -5,11 +5,11 @@ import api from "@/libs/api";
 import { IBeat } from "@/models/beat";
 import {
   FaInstagram,
-  FaLinkedin,
+  FaFacebook,
   FaPhone,
   FaLocationArrow,
-  FaTwitter,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaAngleUp } from "react-icons/fa";
 import { IoMdGlobe } from "react-icons/io";
@@ -94,11 +94,21 @@ const Main = () => {
         className="flex flex-col items-center relative min-h-screen h-fit px-[4%]"
       >
         <div className="flex flex-col shrink-0 lg:flex-row pt-25 min-h-[50dvh] w-full items-center xl:justify-between lg:items-start ">
-          <div className="flex justify-center items-center relative w-full h-30 rounded-xl text-white bg-gradient-to-tr from-blue-800 via-blue-400 to-blue-700 border-black">
-            <div className="text-xl">Music Producer</div>
+          <div className="flex justify-center items-center relative w-full rounded-xl text-white bg-linear-to-tr  border-black">
+            <div className="flex justify-center pt-4.5 overflow-hidden items-center relative w-full h-40 rounded-xl text-white ">
+              <Image
+                src={"/yehuda.jpg"}
+                height={1000}
+                width={1000}
+                draggable={false}
+                alt="afro"
+                className="w-full object-fill"
+              />
+            </div>
+
             <div className="absolute -bottom-8 left-5 h-15 w-15 rounded-full bg-amber-400 border-2 border-white"></div>
           </div>
-          <div className="flex flex-col items-center h-40 mt-13 px-5 border-gray-500">
+          <div className="flex flex-col items-start h-40 mt-13 px-5 border-gray-500">
             <div className="fex w-full mb-3">
               Hello, I&apos;m <b>BeatsByYehuda</b>
             </div>
@@ -106,15 +116,25 @@ const Main = () => {
               I&apos;m a Music Producer, I specialize in creating catchy
               afrobeats and mix/ mastering
             </div>
-            <div className="flex mt-5 mb-6 w-full justify-between items-center">
-              <IoMdGlobe />
-              <FaLinkedin />
-              <FaTwitter />
+            <div className="flex mt-5 mb-6 w-[50%] justify-between items-center">
+              <div className="bg-black/20 p-2 rounded-xl">
+                <FaFacebook />
+              </div>
+              <div className="bg-black/20 p-2 rounded-xl">
+                <FaInstagram />
+              </div>
+
+              <div className="bg-black/20 p-2 rounded-xl">
+                <FaXTwitter />
+              </div>
             </div>
           </div>
         </div>
 
-        <div ref={projectRef} className="flex flex-col my-10">
+        <div
+          ref={projectRef}
+          className="flex items-center font-semibold border-black/30 justify-center rounded-xl w-full border h-12 flex-col my-5 mt-10"
+        >
           Genres I Produce
         </div>
         <div className="flex flex-col w-full justify-center lg:px-[5%] lg:grid lg:gap-x-10 lg:grid-cols-2">
@@ -152,7 +172,10 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <div ref={item2.ref} className="flex flex-col mx-auto my-5">
+        <div
+          ref={item2.ref}
+          className="flex font-semibold items-center border-black/30 justify-center rounded-xl w-full border h-12 flex-col my-5 mt-10"
+        >
           My Beats
         </div>
         {beats && (

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect, SetStateAction } from "react";
-import { FaPause, FaPlay } from "react-icons/fa";
+import { FaPause, FaPlay, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import { IBeat } from "@/models/beat";
 
@@ -83,7 +83,7 @@ const MusicPlayer = ({ beat, setIsMusiPlayerOpen }: ChildProps) => {
   }, [beat?.audioUrl]);
 
   return (
-    <div className="w-full shadow-xl border-t z-60 fixed bottom-0 left-0 py-3 bg-white/15 backdrop-blur-3xl h-40 overflow-hidden mt-5">
+    <div className="w-full shadow-xl border-t-2 border-white z-60 fixed bottom-0 left-0 py-3 bg-white/15 backdrop-blur-3xl h-40 overflow-hidden mt-5">
       <div className="z-10 backdrop-blur-2xl bg-white/10 w-full h-full absolute top-0 left-0"></div>
       <div className="absolute top-0 left-0 w-full h-full mx-auto rounded-lg">
         {" "}
@@ -105,9 +105,9 @@ const MusicPlayer = ({ beat, setIsMusiPlayerOpen }: ChildProps) => {
         <div className="w-full flex flex-col items-center z-40 mt-3">
           <div
             onClick={() => setIsMusiPlayerOpen(false)}
-            className="text-white absolute right-5 top-6.75 cursor-pointer"
+            className="text-white absolute right-5 top-8.5 cursor-pointer"
           >
-            x
+            <FaTimes />
           </div>
           <div className="mb-5 text-sm text-white">{beat?.name}</div>
           <input
@@ -129,7 +129,7 @@ const MusicPlayer = ({ beat, setIsMusiPlayerOpen }: ChildProps) => {
           </div>
 
           <div
-            className="flex justify-center mb-3 items-center mx-auto rounded-full h-12 w-12 mt-1 bg-white/30 text-white flex justify-center"
+            className="flex justify-center mb-3 items-center mx-auto rounded-full h-12 w-12 mt-1 bg-white/30 text-white"
             onClick={toggleAudio}
           >
             {isPlaying ? <FaPause /> : <FaPlay />}

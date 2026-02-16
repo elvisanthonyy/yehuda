@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { IBeat } from "@/models/beat";
+import { FaPlay } from "react-icons/fa6";
 
 interface ChildProps {
   beat: IBeat;
@@ -18,7 +19,10 @@ const Beats = ({ beat }: ChildProps) => {
           alt="back image"
         />
       </div>
-      <div className="absolute w-[80%] py-3 border border-white rounded-xl backdrop-blur-2xl flex items-center flex flex-col bg-white/10 items-center z-40 top-[50%] left-[50%] -translate-[50%]">
+      <div className="absolute w-20 h-20 py-3 border border-white rounded-xl backdrop-blur-2xl flex flex-col bg-white/10 items-center z-40 top-[50%] left-[50%] -translate-[50%]">
+        <FaPlay />
+      </div>
+      <div className="absolute w-[80%] py-3 border border-white rounded-xl backdrop-blur-2xl flex flex-col bg-white/10 items-center z-40 bottom-10 left-[50%] -translate-x-[50%]">
         <div className="text-white text-xs">{beat.name}</div>
       </div>
     </div>
