@@ -17,6 +17,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-yehuda-black: #1b1b1b;
+  --color-yehuda-lightgray: #e4e4e4;
+}
+
+.helper {
+  color: #e4e4e4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,4 +36,45 @@ body {
   background: white;
   color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes nav-keys {
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.nav-animation {
+  animation: nav-keys 3s ease-in;
+}
+
+@keyframes info-keys {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.info-animation {
+  animation: info-keys 3s ease-in;
+}
+
+@keyframes ball-keys {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+.ball-animation {
+  animation: ball-keys 9s linear infinite;
 }

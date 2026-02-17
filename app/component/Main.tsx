@@ -1,6 +1,7 @@
 "use client";
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
+import Nav from "./Nav";
 import api from "@/libs/api";
 import { IBeat } from "@/models/beat";
 import {
@@ -16,6 +17,7 @@ import { IoMdGlobe } from "react-icons/io";
 import Beats from "./Beats";
 import HireMe from "./HireMe";
 import MusicPlayer from "./MusicPlayer";
+import BeatsLoading from "./loading/BeatsLoading";
 
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null);
@@ -46,46 +48,65 @@ function useScrollAnimation() {
 const Main = () => {
   //const item1 = useScrollAnimation();
   const item2 = useScrollAnimation();
-  //const item3 = useScrollAnimation();
+  const item3 = useScrollAnimation();
   const item4 = useScrollAnimation();
   const item5 = useScrollAnimation();
   //const item6 = useScrollAnimation();
   //const item7 = useScrollAnimation();
   //const item8 = useScrollAnimation();
-  //const item9 = useScrollAnimation();
+  const item9 = useScrollAnimation();
 
-  const hireMeRef = useRef<HTMLDivElement>(null);
+  const contactMeRef = useRef<HTMLDivElement>(null);
   const projectRef = useRef<HTMLDivElement>(null);
   const topRef = useRef<HTMLDivElement>(null);
-  //const [isButtonsVisible, setIsButtonVisble] = useState(false);
+  const [isButtonsVisible, setIsButtonVisble] = useState(false);
   const [beats, setBeats] = useState<IBeat[] | []>([]);
   const [isMusicPlayerOpen, setIsMusicPlayerOpen] = useState(false);
   const [beat, setBeat] = useState<IBeat | null>(null);
+  const [beatsLoading, setBeatsLoading] = useState(false);
 
   /*const handleScrollToProject = () => {
     projectRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const handleScrollToHireMe = () => {
-    hireMeRef.current?.scrollIntoView({ behavior: "smooth" });
   };*/
+
+  const handleScrollToContactMe = () => {
+    contactMeRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const handleScrollToTop = () => {
     topRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
-    //setIsButtonVisble(true);
+    setBeatsLoading(true);
+
     api
       .get("/api/get/beats")
       .then((res) => {
+        setBeatsLoading(false);
         setBeats(res.data.beats);
       })
-      .catch();
+      .catch((err) => {
+        setBeatsLoading(false);
+        console.error("Error", err);
+      });
+
+    const checkScroll = () => {
+      if (window.scrollY > 5) {
+        setIsButtonVisble(true);
+      } else {
+        setIsButtonVisble(false);
+      }
+    };
+
+    window.addEventListener("scroll", checkScroll);
+
+    return () => window.removeEventListener("scroll", checkScroll);
   }, []);
 
   return (
     <>
+      <Nav handleScrollToContactMe={handleScrollToContactMe} />
       {isMusicPlayerOpen && (
         <MusicPlayer setIsMusiPlayerOpen={setIsMusicPlayerOpen} beat={beat} />
       )}
@@ -93,7 +114,7 @@ const Main = () => {
         ref={topRef}
         className="flex flex-col items-center relative min-h-screen h-fit px-[4%]"
       >
-        <div className="flex flex-col shrink-0 lg:flex-row pt-25 min-h-[50dvh] w-full items-center xl:justify-between lg:items-start ">
+        <div className="flex info-animation flex-col shrink-0 lg:flex-row pt-25 min-h-[50dvh] w-full items-center xl:justify-between lg:items-start ">
           <div className="flex justify-center items-center relative w-full rounded-xl text-white bg-linear-to-tr  border-black">
             <div className="flex justify-center pt-4.5 overflow-hidden items-center relative w-full h-40 rounded-xl text-white ">
               <Image
@@ -106,25 +127,27 @@ const Main = () => {
               />
             </div>
 
-            <div className="absolute -bottom-8 left-5 h-15 w-15 rounded-full bg-amber-400 border-2 border-white"></div>
+            <div className="absolute flex justify-center items-center -bottom-8 left-5 h-15 w-15 rounded-full bg-linear-to-tr ball-animation from-amber-400 to-green-600 border-2 border-white"></div>
           </div>
-          <div className="flex flex-col items-start h-40 mt-13 px-5 border-gray-500">
+          <div className="flex flex-col text-yehuda-black items-start h-40 mt-13 px-5 border-gray-500">
             <div className="fex w-full mb-3">
-              Hello, I&apos;m <b>BeatsByYehuda</b>
+              Hello, I&apos;m{" "}
+              <span className="font-semibold">BeatsByYehuda</span>
             </div>
             <div>
-              I&apos;m a Music Producer, I specialize in creating catchy
-              afrobeats and mix/ mastering
+              I&apos;m a <span className="font-semibold">Music Producer</span>,
+              I specialize in creating catchy afrobeats and I&apos;m also a{" "}
+              <span className="font-semibold">mix/master engineer</span>
             </div>
             <div className="flex mt-5 mb-6 w-[50%] justify-between items-center">
-              <div className="bg-black/20 p-2 rounded-xl">
+              <div className="bg-yehuda-lightgray p-2 rounded-xl">
                 <FaFacebook />
               </div>
-              <div className="bg-black/20 p-2 rounded-xl">
+              <div className="bg-yehuda-lightgray p-2 rounded-xl">
                 <FaInstagram />
               </div>
 
-              <div className="bg-black/20 p-2 rounded-xl">
+              <div className="bg-yehuda-lightgray p-2 rounded-xl">
                 <FaXTwitter />
               </div>
             </div>
@@ -139,14 +162,12 @@ const Main = () => {
         </div>
         <div className="flex flex-col w-full justify-center lg:px-[5%] lg:grid lg:gap-x-10 lg:grid-cols-2">
           <div
-            ref={item5.ref}
-            className={`transition-all w-full lg:w-full duration-700 ease-in ${
-              item5.isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
-            }`}
+            className={`transition-all w-full lg:w-full duration-700 ease-in`}
           >
-            <div className="w-full overflow-hidden flex items-center justify-center rounded-xl aspect-square bg-blue-400 mb-5">
+            <div
+              ref={item3.ref}
+              className={`w-full overflow-hidden transition-all duration-700 ease-in ${item3.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center rounded-xl aspect-square bg-yehuda-lightgray mb-5`}
+            >
               <div className="text-2xl w-full h-full text-white ">
                 <Image
                   src={"/genres/afro1.jpg"}
@@ -158,7 +179,10 @@ const Main = () => {
                 />
               </div>
             </div>
-            <div className="w-full flex overflow-hidden items-center justify-center rounded-xl aspect-square bg-green-400">
+            <div
+              ref={item4.ref}
+              className={`w-full overflow-hidden transition-all duration-700 ease-in ${item4.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center rounded-xl aspect-square bg-yehuda-lightgray mb-5`}
+            >
               <div className="text-2xl w-full h-full text-white">
                 <Image
                   src={"/genres/afro2.jpg"}
@@ -178,58 +202,72 @@ const Main = () => {
         >
           My Beats
         </div>
-        {beats && (
-          <div className="w-full">
-            {beats.map((beat: IBeat) => (
-              <div
-                onClick={() => {
-                  setBeat(beat);
-                  setIsMusicPlayerOpen(true);
-                }}
-                key={beat._id?.toString()}
-                className="w-full"
-              >
-                <Beats beat={beat} />
-              </div>
-            ))}
-          </div>
-        )}
+
+        <div className="w-full min-h-140">
+          {beatsLoading ? (
+            <BeatsLoading />
+          ) : (
+            <div
+              ref={item5.ref}
+              className={`w-full transition-all duration-700 ease-in ${item5.isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            >
+              {beats.map((beat: IBeat) => (
+                <div
+                  onClick={() => {
+                    setBeat(beat);
+                    setIsMusicPlayerOpen(true);
+                  }}
+                  key={beat._id?.toString()}
+                  className="w-full"
+                >
+                  <Beats beat={beat} />
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
         <div
           onClick={handleScrollToTop}
-          className="fixed right-10 bottom-10 flex justify-center items-center cursor-pointer w-12 h-12 rounded-full border-1 border-white/50 text-white z-50 bg-black shadow-4xl backdrop-blur-2xl"
+          className={`fixed right-10 bottom-10 ${isButtonsVisible ? "flex" : "hidden"} justify-center items-center cursor-pointer w-12 h-12 rounded-full border-1 border-white/50 text-white z-50 bg-black shadow-4xl backdrop-blur-2xl`}
         >
           <FaAngleUp />
         </div>
 
+        <div className="flex font-semibold items-center border-black/30 justify-center rounded-xl w-full border h-12 flex-col mt-10">
+          CONTACT
+        </div>
         <div
-          ref={item4.ref}
+          ref={item9.ref}
           className={`transition-all duration-700 ease-in ${
-            item4.isVisible
+            item9.isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10"
-          } aspect-square text-sm w-full border-b border-t mx-auto flex flex-col justify-center py-10 md:h-80 items-center border-b-gray-400 border-t-gray-400`}
+          } text-sm w-full border-b mx-auto text-yehuda-black flex flex-col justify-center md:h-80 items-center py-10 border-b-gray-400 border-t-gray-400`}
         >
-          <div className="flex flex-col mx-auto mb-5">CONTACT</div>
           <div className="flex my-2 items-center w-[90%]">
-            <FaInstagram className="w-[20%] text-black" />
-            <div> Yehuda </div>
+            <FaInstagram className="w-[20%] text-lg " />
+            <div className="text-lg"> Yehuda </div>
+          </div>
+          <div className="flex my-2  items-center w-[90%]">
+            <FaPhone className="w-[20%] text-lg  rotate-90" />
+            <div className="text-lg"> +234 906 481 2779 </div>
           </div>
           <div className="flex my-2 items-center w-[90%]">
-            <FaPhone className="w-[20%]  text-black rotate-90" />
-            <div> +234 906 481 2779 </div>
+            <FaLocationArrow className="w-[20%] text-lg " />
+            <div className="text-lg"> Kaduna, Nigeria. </div>
           </div>
-          <div className="flex my-2 items-center w-[90%]">
-            <FaLocationArrow className="w-[20%]  text-black" />
-            <div> Kaduna, Nigeria. </div>
-          </div>
-          <div className="flex my-2 items-center w-[90%]">
-            <BiLogoGmail className="w-[20%] text-black" />
-            <div> info.elvisanthony@gmail.com </div>
+          <div className="flex my-2  items-center w-[90%]">
+            <BiLogoGmail className="w-[20%] text-lg " />
+            <div className="text-lg"> info.elvisanthony@gmail.com </div>
           </div>
         </div>
-        <div ref={hireMeRef} className="flex flex-col mx-auto my-5 mt-8">
-          HIRE ME
+        <div
+          ref={contactMeRef}
+          className="flex font-semibold flex-col mx-auto my-5 mt-8"
+        >
+          CONTACT ME
         </div>
+
         <HireMe />
       </main>
     </>

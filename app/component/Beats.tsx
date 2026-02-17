@@ -8,21 +8,22 @@ interface ChildProps {
 
 const Beats = ({ beat }: ChildProps) => {
   return (
-    <div className="w-full aspect-square relative mb-5 rounded-2xl overflow-hidden">
-      <div className="absolute h-full top-0 left-0 w-full h-35 mx-auto rounded-lg">
+    <div className="w-full h-65 relative mb-5 rounded-sm overflow-hidden">
+      <div className="absolute h-full top-0 left-0 w-full mx-auto rounded-lg">
         {" "}
         <Image
           src={beat.imageUrl}
           height={1000}
           width={1000}
+          draggable={false}
           className="h-full w-full object-cover"
           alt="back image"
         />
       </div>
-      <div className="flex text-xl text-white justify-center items-center absolute w-20 h-20 py-3 border border-white rounded-xl backdrop-blur-2xl flex flex-col bg-white/10 items-center z-40 top-[50%] left-[50%] -translate-[50%]">
+      <div className="flex text-xl text-white justify-center absolute w-20 h-15 py-3 border border-white rounded-sm backdrop-blur-2xl flex-col bg-white/10 items-center z-40 top-[50%] left-[50%] -translate-[50%]">
         <FaPlay />
       </div>
-      <div className="absolute w-[80%] py-3 border border-white rounded-xl backdrop-blur-2xl flex flex-col bg-white/10 items-center z-40 bottom-10 left-[50%] -translate-x-[50%]">
+      <div className="absolute w-[80%] py-3 border border-white/80 rounded-sm backdrop-blur-xl flex flex-col bg-white/10 items-center z-40 bottom-7 left-[50%] -translate-x-[50%]">
         <div className="text-white text-xs">{beat.name}</div>
       </div>
     </div>

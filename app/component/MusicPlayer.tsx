@@ -83,7 +83,7 @@ const MusicPlayer = ({ beat, setIsMusiPlayerOpen }: ChildProps) => {
   }, [beat?.audioUrl]);
 
   return (
-    <div className="w-full shadow-xl border-t-2 border-white z-60 fixed bottom-0 left-0 py-3 bg-white/15 backdrop-blur-3xl h-40 overflow-hidden mt-5">
+    <div className="w-full shadow-3xl border-t-2 border-white z-60 fixed bottom-0 left-0 py-3 h-40 overflow-hidden mt-5">
       <div className="z-10 backdrop-blur-2xl bg-white/10 w-full h-full absolute top-0 left-0"></div>
       <div className="absolute top-0 left-0 w-full h-full mx-auto rounded-lg">
         {" "}
@@ -109,13 +109,13 @@ const MusicPlayer = ({ beat, setIsMusiPlayerOpen }: ChildProps) => {
           >
             <FaTimes />
           </div>
-          <div className="mb-5 text-sm text-white">{beat?.name}</div>
+          <div className="mb-5  text-sm text-white">{beat?.name}</div>
           <input
             value={currentTime}
             min={0}
             max={duration}
             onChange={handleSeek}
-            className="w-full bg-white/40 accent-white appearance-none bg-white h-0.5"
+            className="w-full bg-white/40 accent-white appearance-none  h-0.5"
             type="range"
           />
 
