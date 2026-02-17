@@ -209,7 +209,7 @@ const Main = () => {
           ) : (
             <div
               ref={item5.ref}
-              className={`w-full transition-all duration-700 ease-in ${item5.isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+              className={`w-full transition-all duration-700 ease-in`}
             >
               {beats.map((beat: IBeat) => (
                 <div
