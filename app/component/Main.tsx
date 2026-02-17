@@ -9,6 +9,7 @@ import {
   FaFacebook,
   FaPhone,
   FaLocationArrow,
+  FaYoutube,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
@@ -127,7 +128,20 @@ const Main = () => {
               />
             </div>
 
-            <div className="absolute flex justify-center items-center -bottom-8 left-5 h-15 w-15 rounded-full bg-linear-to-tr ball-animation from-amber-400 to-green-600 border-2 border-white"></div>
+            <div className="absolute flex justify-center items-center -bottom-8 left-7 h-17 w-17 rounded-full bg-linear-to-tr from-amber-400 to-green-600">
+              <div className="rounded-full pt-7 flex justify-center items-center overflow-hidden border-b-green-500 border-t-green-500 w-full h-full ">
+                <Image
+                  src={"/small-image.jpg"}
+                  height={1000}
+                  width={1000}
+                  draggable={false}
+                  alt="image"
+                  className="w-full"
+                />
+              </div>
+
+              <div className="absolute z-30 border-2 shadow-[0_0_10px_rgba(0,95,238,0.6)] rounded-full ball-animation border-b-blue-600 border-t-green-500 w-17 h-17 top-0 left-0"></div>
+            </div>
           </div>
           <div className="flex flex-col text-yehuda-black items-start h-40 mt-13 px-5 border-gray-500">
             <div className="fex w-full mb-3">
@@ -139,16 +153,19 @@ const Main = () => {
               I specialize in creating catchy afrobeats and I&apos;m also a{" "}
               <span className="font-semibold">mix/master engineer</span>
             </div>
-            <div className="flex mt-5 mb-6 w-[50%] justify-between items-center">
-              <div className="bg-yehuda-lightgray p-2 rounded-xl">
+            <div className="flex mt-5  mb-6 justify-between items-center">
+              <div className="bg-yehuda-lightgray mr-4 p-2 rounded-xl">
                 <FaFacebook />
               </div>
-              <div className="bg-yehuda-lightgray p-2 rounded-xl">
+              <div className="bg-yehuda-lightgray mr-4 p-2 rounded-xl">
                 <FaInstagram />
               </div>
 
-              <div className="bg-yehuda-lightgray p-2 rounded-xl">
+              <div className="bg-yehuda-lightgray mr-4 p-2 rounded-xl">
                 <FaXTwitter />
+              </div>
+              <div className="bg-yehuda-lightgray mr-4 p-2 rounded-xl">
+                <FaYoutube />
               </div>
             </div>
           </div>
@@ -156,7 +173,7 @@ const Main = () => {
 
         <div
           ref={projectRef}
-          className="flex items-center font-semibold border-black/30 justify-center rounded-xl w-full border h-12 flex-col my-5 mt-10"
+          className="flex items-center font-semibold border-black/30 text-yehuda-black justify-center rounded-xl w-full border h-12 flex-col my-5 mt-10"
         >
           Genres I Produce
         </div>
@@ -225,6 +242,14 @@ const Main = () => {
               ))}
             </div>
           )}
+        </div>
+        <div className="bg-yehuda-lightgray/80 flex flex-col justify-center items-center rounded-lg w-full h-60">
+          <div className="font-semibold text-lg">Follow me on Youtube</div>
+
+          <div className="w-[85%] cursor-pointer text-white flex justify-center items-center h-15 bg-red-600 mt-5 rounded-xl">
+            <FaYoutube className="text-2xl mr-3" />
+            <div className=""> BeatsByYehuda</div>
+          </div>
         </div>
         <div
           onClick={handleScrollToTop}
