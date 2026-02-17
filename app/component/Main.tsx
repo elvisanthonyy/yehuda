@@ -140,7 +140,7 @@ const Main = () => {
                 />
               </div>
 
-              <div className="absolute z-30 border-2 shadow-[0_0_9px_rgba(0,95,238,0.8)] rounded-full ball-animation border-b-blue-600 border-r-blue-600 w-17 h-17 top-0 left-0"></div>
+              <div className="absolute z-30 border-2 shadow-[4px_0_9px_rgba(0,95,238,0.4)] rounded-full ball-animation border-b-blue-600 border-r-blue-600 w-17 h-17 top-0 left-0"></div>
             </div>
           </div>
           <div className="flex flex-col text-yehuda-black items-start h-40 mt-13 px-5 border-gray-500">
