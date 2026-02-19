@@ -50,7 +50,7 @@ const HireMe = () => {
 
   return (
     <form
-      className="flex flex-col w-[90%] mx-auto min-h-100 h-fit mb-20"
+      className="flex flex-col md:w-[30%] w-[90%] mx-auto min-h-100 h-fit mb-20"
       onSubmit={handleSubmit(onSubmit)}
     >
       {loading && <LoadingH />}
