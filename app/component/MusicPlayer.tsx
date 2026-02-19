@@ -83,7 +83,7 @@ const MusicPlayer = ({ beat, setIsMusiPlayerOpen }: ChildProps) => {
   }, [beat?.audioUrl]);
 
   return (
-    <div className="w-full  shadow-[0_-6px_20px_rgba(0,0,0,0.15)] border-t border-yehuda-lightgray z-60 fixed bottom-0 left-0 py-3 min-h-44 overflow-hidden mt-5">
+    <div className="w-full  shadow-[0_-6px_20px_rgba(0,0,0,0.15)] border-t border-yehuda-lightgray z-65 fixed bottom-0 left-0 py-3 min-h-44 overflow-hidden mt-5">
       <div className="z-10 backdrop-blur-3xl bg-white/0 w-full h-full absolute top-0 left-0"></div>
       <div className="absolute top-0 opacity-70 left-0 w-full h-full mx-auto rounded-lg">
         {" "}

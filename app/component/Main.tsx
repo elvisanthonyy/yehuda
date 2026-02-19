@@ -53,10 +53,11 @@ const Main = () => {
   const item3 = useScrollAnimation();
   const item4 = useScrollAnimation();
   const item5 = useScrollAnimation();
-  //const item6 = useScrollAnimation();
+  const item6 = useScrollAnimation();
   //const item7 = useScrollAnimation();
   //const item8 = useScrollAnimation();
   const item9 = useScrollAnimation();
+  const item10 = useScrollAnimation();
 
   const contactMeRef = useRef<HTMLDivElement>(null);
   const projectRef = useRef<HTMLDivElement>(null);
@@ -186,7 +187,7 @@ const Main = () => {
           className={`transition-all w-[92%] lg:w-full duration-700 ease-in`}
         >
           <div
-            ref={item2.ref}
+            ref={item10.ref}
             className="flex sticky border-black/30 border shadow-sm  font-semibold top-3 z-60 bg-white w-full items-center justify-center rounded-xl h-12 flex-col my-5 mt-5"
           >
             Afro Beats
@@ -207,13 +208,12 @@ const Main = () => {
             </div>
           </div>
 
-          <div className="w-full min-h-60">
+          <div ref={item5.ref} className="w-full min-h-60">
             {beatsLoading ? (
               <BeatsLoading />
             ) : (
               <div
-                ref={item5.ref}
-                className={`w-full h-60 overflow-y-auto no-scrollbar flex transition-all duration-700 ease-in`}
+                className={`w-full h-60 overflow-y-auto no-scrollbar flex transition-all ${item5.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
               >
                 {beats
                   .filter((beat) => beat.category === "afrobeats")
@@ -258,13 +258,12 @@ const Main = () => {
             </div>
           </div>
 
-          <div className="w-full min-h-60 ">
+          <div ref={item6.ref} className="w-full min-h-60 ">
             {beatsLoading ? (
               <BeatsLoading />
             ) : (
               <div
-                ref={item5.ref}
-                className={`w-full overflow-y-auto no-scrollbar flex h-60 transition-all duration-700 ease-in`}
+                className={`w-full overflow-y-auto no-scrollbar flex h-60 transition-all ${item6.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
               >
                 {beats
                   .filter((beat) => beat.category === "afrofusion")
@@ -299,7 +298,7 @@ const Main = () => {
         </div>
         <div
           onClick={handleScrollToTop}
-          className={`fixed right-10 bottom-10 ${isButtonsVisible ? "flex" : "hidden"} justify-center items-center cursor-pointer w-12 h-12 rounded-full border-1 border-white/50 text-white z-50 bg-black shadow-4xl backdrop-blur-2xl`}
+          className={`fixed right-10 bottom-10 ${isButtonsVisible ? "flex" : "hidden"} justify-center items-center cursor-pointer w-12 h-12 rounded-full border-1 border-white/50 text-white z-70 bg-black shadow-4xl backdrop-blur-2xl`}
         >
           <FaAngleUp />
         </div>
