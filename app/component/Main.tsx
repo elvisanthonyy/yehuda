@@ -180,7 +180,7 @@ const Main = () => {
           Genres I Produce
         </div>
 
-        <div className="flex items-center font-semibold border-black/30 text-yehuda-black justify-center rounded-xl w-[92%]  h-12 flex-col">
+        <div className="flex items-center font-semibold border-black/30 text-yehuda-black justify-center rounded-xl w-[92%]  h-6 flex-col">
           <FaArrowDown />
         </div>
         <div
@@ -188,7 +188,7 @@ const Main = () => {
         >
           <div
             ref={item10.ref}
-            className="flex sticky border-black/30 border shadow-sm  font-semibold top-3 z-60 bg-white w-full items-center justify-center rounded-xl h-12 flex-col my-5 mt-5"
+            className="flex sticky border-black/30 border shadow-sm  font-semibold top-3 z-60 bg-black text-white w-full items-center justify-center rounded-xl h-12 flex-col my-5 mt-5"
           >
             Afro Beats
           </div>
@@ -238,7 +238,7 @@ const Main = () => {
           </div>
           <div
             ref={item2.ref}
-            className="flex sticky top-3 z-60 shadow-md bg-white font-semibold w-full items-center border-black/30 justify-center rounded-xl border h-12 flex-col mb-5"
+            className="flex sticky top-3 z-60 shadow-md bg-black text-white font-semibold w-full items-center border-black/30 justify-center rounded-xl border h-12 flex-col mb-5"
           >
             Afro Fusion
           </div>
@@ -298,12 +298,12 @@ const Main = () => {
         </div>
         <div
           onClick={handleScrollToTop}
-          className={`fixed right-10 bottom-10 ${isButtonsVisible ? "flex" : "hidden"} justify-center items-center cursor-pointer w-12 h-12 rounded-full border-1 border-white/50 text-white z-70 bg-black shadow-4xl backdrop-blur-2xl`}
+          className={`fixed right-10 bottom-10 ${isButtonsVisible ? "flex" : "hidden"} justify-center items-center cursor-pointer w-12 h-12 rounded-full border border-white/50 text-white z-70 bg-black shadow-4xl backdrop-blur-2xl`}
         >
           <FaAngleUp />
         </div>
 
-        <div className="flex w-[92%] font-semibold items-center border-black/30 sticky bg-white z-60 top-3 shadow-sm justify-center rounded-xl border h-12 flex-col mt-10">
+        <div className="flex w-[92%] font-semibold items-center border-black/30 sticky bg-black text-white z-60 top-3 shadow-sm justify-center rounded-xl border h-12 flex-col mt-10">
           CONTACT
         </div>
         <div

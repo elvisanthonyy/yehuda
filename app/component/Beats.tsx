@@ -36,7 +36,7 @@ const Beats = ({ beat, setBeat, setIsMusicPlayerOpen }: ChildProps) => {
           <FaPlay />
         </div>
       </div>
-      <div className="w-full text-black text-xs overflow-hidden h-10 whitespace-nowrap text-ellipsis border-yehuda-black/30 backdrop-blur-xl flex flex-nowrap items-end z-40 bottom-7">
+      <div className="w-full text-yehuda-black font-semibold text-xs overflow-hidden h-10 whitespace-nowrap text-ellipsis border-yehuda-black/30 backdrop-blur-xl flex flex-nowrap items-end z-40 bottom-7">
         {beat.name}
       </div>
     </div>
