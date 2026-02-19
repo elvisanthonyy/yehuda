@@ -4,6 +4,7 @@ export interface IBeat extends Document {
   name: string;
   imageUrl: string;
   audioUrl: string;
+  category: string;
 }
 
 const BeatSchema = new mongoose.Schema<IBeat>(
@@ -17,6 +18,10 @@ const BeatSchema = new mongoose.Schema<IBeat>(
       required: true,
     },
     audioUrl: {
+      type: String,
+      required: true,
+    },
+    category: {
       type: String,
       required: true,
     },

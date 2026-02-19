@@ -22,7 +22,7 @@
 }
 
 .helper {
-  color: #e4e4e4;
+  color: rgba(rgba(52, 133, 255, 0.514), green, blue, alpha);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,6 +36,15 @@ body {
   background: white;
   color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @keyframes nav-keys {

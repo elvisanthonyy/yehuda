@@ -19,6 +19,7 @@ import Beats from "./Beats";
 import HireMe from "./HireMe";
 import MusicPlayer from "./MusicPlayer";
 import BeatsLoading from "./loading/BeatsLoading";
+import { FaArrowDown } from "react-icons/fa6";
 
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null);
@@ -113,9 +114,9 @@ const Main = () => {
       )}
       <main
         ref={topRef}
-        className="flex flex-col items-center relative min-h-screen h-fit px-[4%]"
+        className="flex flex-col items-center relative min-h-screen h-fit"
       >
-        <div className="flex info-animation flex-col shrink-0 lg:flex-row pt-25 min-h-[50dvh] w-full items-center xl:justify-between lg:items-start ">
+        <div className="flex w-[92%] info-animation flex-col shrink-0 lg:flex-row pt-25 min-h-[50dvh] items-center xl:justify-between lg:items-start ">
           <div className="flex justify-center items-center relative w-full rounded-xl text-white bg-linear-to-tr  border-black">
             <div className="flex justify-center pt-4.5 overflow-hidden items-center relative w-full h-40 rounded-xl text-white ">
               <Image
@@ -173,77 +174,122 @@ const Main = () => {
 
         <div
           ref={projectRef}
-          className="flex items-center font-semibold border-black/30 text-yehuda-black justify-center rounded-xl w-full border h-12 flex-col my-5 mt-10"
+          className="flex items-center font-semibold border-black/30 text-yehuda-black justify-center rounded-xl w-[92%] border h-12 flex-col my-5 mt-10"
         >
           Genres I Produce
         </div>
-        <div className="flex flex-col w-full justify-center lg:px-[5%] lg:grid lg:gap-x-10 lg:grid-cols-2">
-          <div
-            className={`transition-all w-full lg:w-full duration-700 ease-in`}
-          >
-            <div
-              ref={item3.ref}
-              className={`w-full overflow-hidden transition-all duration-700 ease-in ${item3.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center rounded-xl aspect-square bg-yehuda-lightgray mb-5`}
-            >
-              <div className="text-2xl w-full h-full text-white ">
-                <Image
-                  src={"/genres/afro1.jpg"}
-                  height={1000}
-                  width={1000}
-                  draggable={false}
-                  alt="afro"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-            <div
-              ref={item4.ref}
-              className={`w-full overflow-hidden transition-all duration-700 ease-in ${item4.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center rounded-xl aspect-square bg-yehuda-lightgray mb-5`}
-            >
-              <div className="text-2xl w-full h-full text-white">
-                <Image
-                  src={"/genres/afro2.jpg"}
-                  height={1000}
-                  width={1000}
-                  draggable={false}
-                  alt="afro"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
+
+        <div className="flex items-center font-semibold border-black/30 text-yehuda-black justify-center rounded-xl w-[92%]  h-12 flex-col">
+          <FaArrowDown />
         </div>
         <div
-          ref={item2.ref}
-          className="flex font-semibold items-center border-black/30 justify-center rounded-xl w-full border h-12 flex-col my-5 mt-10"
+          className={`transition-all w-[92%] lg:w-full duration-700 ease-in`}
         >
-          My Beats
+          <div
+            ref={item2.ref}
+            className="flex sticky border-black/30 border shadow-sm  font-semibold top-3 z-60 bg-white w-full items-center justify-center rounded-xl h-12 flex-col my-5 mt-5"
+          >
+            Afro Beats
+          </div>
+          <div
+            ref={item3.ref}
+            className={`w-full overflow-hidden transition-all duration-700 ease-in ${item3.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center rounded-xl aspect-square bg-yehuda-lightgray mb-5`}
+          >
+            <div className="text-2xl w-full h-full text-white ">
+              <Image
+                src={"/genres/afro1.jpg"}
+                height={1000}
+                width={1000}
+                draggable={false}
+                alt="afro"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="w-full min-h-60">
+            {beatsLoading ? (
+              <BeatsLoading />
+            ) : (
+              <div
+                ref={item5.ref}
+                className={`w-full h-60 overflow-y-auto no-scrollbar flex transition-all duration-700 ease-in`}
+              >
+                {beats
+                  .filter((beat) => beat.category === "afrobeats")
+                  .map((beat: IBeat) => (
+                    <div
+                      onClick={() => {
+                        setBeat(beat);
+                        setIsMusicPlayerOpen(true);
+                      }}
+                      key={beat._id?.toString()}
+                      className="flex shrink-0 w-40 h-40 mr-3"
+                    >
+                      <Beats
+                        beat={beat}
+                        setBeat={setBeat}
+                        setIsMusicPlayerOpen={setIsMusicPlayerOpen}
+                      />
+                    </div>
+                  ))}
+              </div>
+            )}
+          </div>
+          <div
+            ref={item2.ref}
+            className="flex sticky top-3 z-60 shadow-md bg-white font-semibold w-full items-center border-black/30 justify-center rounded-xl border h-12 flex-col mb-5"
+          >
+            Afro Fusion
+          </div>
+          <div
+            ref={item4.ref}
+            className={`w-full overflow-hidden transition-all duration-700 ease-in ${item4.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center rounded-xl aspect-square bg-yehuda-lightgray mb-5`}
+          >
+            <div className="text-2xl w-full h-full text-white">
+              <Image
+                src={"/genres/afro2.jpg"}
+                height={1000}
+                width={1000}
+                draggable={false}
+                alt="afro"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="w-full min-h-60 ">
+            {beatsLoading ? (
+              <BeatsLoading />
+            ) : (
+              <div
+                ref={item5.ref}
+                className={`w-full overflow-y-auto no-scrollbar flex h-60 transition-all duration-700 ease-in`}
+              >
+                {beats
+                  .filter((beat) => beat.category === "afrofusion")
+                  .map((beat: IBeat) => (
+                    <div
+                      onClick={() => {
+                        setBeat(beat);
+                        setIsMusicPlayerOpen(true);
+                      }}
+                      key={beat._id?.toString()}
+                      className="flex shrink-0 w-40 h-40 mr-2"
+                    >
+                      <Beats
+                        beat={beat}
+                        setBeat={setBeat}
+                        setIsMusicPlayerOpen={setIsMusicPlayerOpen}
+                      />
+                    </div>
+                  ))}
+              </div>
+            )}
+          </div>
         </div>
 
-        <div className="w-full min-h-140">
-          {beatsLoading ? (
-            <BeatsLoading />
-          ) : (
-            <div
-              ref={item5.ref}
-              className={`w-full transition-all duration-700 ease-in`}
-            >
-              {beats.map((beat: IBeat) => (
-                <div
-                  onClick={() => {
-                    setBeat(beat);
-                    setIsMusicPlayerOpen(true);
-                  }}
-                  key={beat._id?.toString()}
-                  className="w-full"
-                >
-                  <Beats beat={beat} />
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-        <div className="bg-yehuda-lightgray/80 flex flex-col justify-center items-center rounded-lg w-full h-60">
+        <div className="bg-yehuda-lightgray/80 w-[92%] flex flex-col justify-center items-center rounded-lg h-60">
           <div className="font-semibold text-lg">Follow me on Youtube</div>
 
           <div className="w-[85%] cursor-pointer text-white flex justify-center items-center h-15 bg-red-600 mt-5 rounded-xl">
@@ -258,7 +304,7 @@ const Main = () => {
           <FaAngleUp />
         </div>
 
-        <div className="flex font-semibold items-center border-black/30 justify-center rounded-xl w-full border h-12 flex-col mt-10">
+        <div className="flex w-[92%] font-semibold items-center border-black/30 sticky bg-white z-60 top-3 shadow-sm justify-center rounded-xl border h-12 flex-col mt-10">
           CONTACT
         </div>
         <div
