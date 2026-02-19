@@ -20,6 +20,7 @@ import HireMe from "./HireMe";
 import MusicPlayer from "./MusicPlayer";
 import BeatsLoading from "./loading/BeatsLoading";
 import { FaArrowDown } from "react-icons/fa6";
+import Link from "next/link";
 
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null);
@@ -180,15 +181,15 @@ const Main = () => {
           Genres I Produce
         </div>
 
-        <div className="flex items-center font-semibold border-black/30 text-yehuda-black justify-center rounded-xl w-[92%]  h-6 flex-col">
-          <FaArrowDown />
+        <div className="flex items-center font-semibold border-black/30 text-yehuda-black justify-center rounded-xl w-[92%] flex-col">
+          <FaArrowDown className="text-xl" />
         </div>
         <div
           className={`transition-all w-[92%] lg:w-full duration-700 ease-in`}
         >
           <div
             ref={item10.ref}
-            className="flex sticky border-black/30 border shadow-sm  font-semibold top-3 z-60 bg-black text-white w-full items-center justify-center rounded-xl h-12 flex-col my-5 mt-5"
+            className="flex sticky border-black/30 border shadow-sm  font-semibold top-3 z-60 mx-auto bg-yehuda-black text-white w-[50%] items-center justify-center rounded-xl h-12 flex-col mt-2 mb-5"
           >
             Afro Beats
           </div>
@@ -238,7 +239,7 @@ const Main = () => {
           </div>
           <div
             ref={item2.ref}
-            className="flex sticky top-3 z-60 shadow-md bg-black text-white font-semibold w-full items-center border-black/30 justify-center rounded-xl border h-12 flex-col mb-5"
+            className="flex sticky top-3 z-60 shadow-md bg-yehuda-black mx-auto text-white font-semibold w-[50%] items-center border-black/30 justify-center rounded-xl border h-12 flex-col mb-5"
           >
             Afro Fusion
           </div>
@@ -291,10 +292,18 @@ const Main = () => {
         <div className="bg-yehuda-lightgray/80 w-[92%] flex flex-col justify-center items-center rounded-lg h-60">
           <div className="font-semibold text-lg">Follow me on Youtube</div>
 
-          <div className="w-[85%] cursor-pointer text-white flex justify-center items-center h-15 bg-red-600 mt-5 rounded-xl">
-            <FaYoutube className="text-2xl mr-3" />
-            <div className=""> BeatsByYehuda</div>
-          </div>
+          <Link
+            href={
+              "https://l.instagram.com/?u=https%3A%2F%2Fyoutube.com%2F%40beatsbyehuda%3Fsi%3DypppTO93I5ywiaim%26fbclid%3DPAZXh0bgNhZW0DMTAwAHNydGMGYXBwX2lkDDI1NjI4MTA0MDU1OAABp3XKMC9k6TJ4u3sVwoDvP-4197jgRuvOt64SHJIrJFfdx4XCgvfdCMDqHzk8_aem_HBtrmTCuC3ivFYJKAMwWrA&e=AT1vq1iV_PJqrxzXzIZfdZowq49KsOHQz_9qWIs-YCR-l7dilDztFgxZSz5bPQ8sTwDxG2Yz2R2z_JIU8KFY2Jo_R1SIvyz_YdxIwcVNMg"
+            }
+            target="_blank"
+            className="w-[85%]"
+          >
+            <div className="w-full cursor-pointer text-white flex justify-center items-center h-13 bg-red-600 mt-5 rounded-xl">
+              <FaYoutube className="text-2xl mr-3" />
+              <div className=""> BeatsByYehuda</div>
+            </div>
+          </Link>
         </div>
         <div
           onClick={handleScrollToTop}
@@ -303,7 +312,7 @@ const Main = () => {
           <FaAngleUp />
         </div>
 
-        <div className="flex w-[92%] font-semibold items-center border-black/30 sticky bg-black text-white z-60 top-3 shadow-sm justify-center rounded-xl border h-12 flex-col mt-10">
+        <div className="flex w-[42%] font-semibold items-center border-black/30 sticky bg-yehuda-black text-white z-60 top-3 shadow-sm justify-center rounded-xl border h-12 flex-col mt-10">
           CONTACT
         </div>
         <div
