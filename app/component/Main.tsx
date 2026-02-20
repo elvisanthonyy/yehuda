@@ -333,43 +333,43 @@ const Main = () => {
         >
           <div className="flex my-2  items-center box-border w-[88%]">
             <div className="flex shrink-0">
-              <FaInstagram className="text-2xl" />
+              <FaInstagram className="text-lg" />
             </div>
 
             <div className="w-[90%] mx-3">
               <div className="border-b border-yehuda-lightgray"></div>
             </div>
-            <div className="text-lg ml-auto"> Yehuda </div>
+            <div className="ml-auto"> Yehuda </div>
           </div>
           <div className="flex my-2  items-center w-[88%]">
             <div className="flex shrink-0 rotate-90">
-              <FaPhone className="text-xl" />
+              <FaPhone className="text-lg" />
             </div>
             <div className="w-[90%] mx-3">
               <div className="border-b border-yehuda-lightgray"></div>
             </div>
-            <div className="text-lg ml-auto shrink-0"> +234 813 711 4067 </div>
+            <div className="ml-auto shrink-0"> +234 813 711 4067 </div>
           </div>
           <div className="flex my-2 items-center w-[88%]">
             <div className="flex shrink-0">
-              <FaLocationArrow className="text-xl" />
+              <FaLocationArrow className="text-lg" />
             </div>
             <div className="w-[90%] mx-3">
               <div className="border-b border-yehuda-lightgray"></div>
             </div>
-            <div className="text-lg ml-auto shrink- flex shrink-0">
+            <div className="ml-auto shrink- flex shrink-0">
               {" "}
               Kaduna, Nigeria.{" "}
             </div>
           </div>
           <div className="flex my-2  items-center w-[88%]">
             <div className="flex shrink-0">
-              <BiLogoGmail className="text-2xl" />
+              <BiLogoGmail className="text-lg" />
             </div>
             <div className="w-[90%] mx-3">
               <div className="border-b-2 border-yehuda-lightgray"></div>
             </div>
-            <div className="text-lg ml-auto flex shrink-0">
+            <div className=" ml-auto flex shrink-0">
               {" "}
               beatsbyyehuda@gmail.com{" "}
             </div>
