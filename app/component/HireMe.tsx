@@ -50,7 +50,7 @@ const HireMe = () => {
 
   return (
     <form
-      className="flex flex-col md:w-[30%] w-[90%] mx-auto min-h-100 h-fit mb-20"
+      className="flex flex-col md:w-[30%] w-[90%] mx-auto min-h-100 h-fit mb-3"
       onSubmit={handleSubmit(onSubmit)}
     >
       {loading && <LoadingH />}
@@ -67,7 +67,7 @@ const HireMe = () => {
         })}
         type="text"
         placeholder="Name"
-        className="bg-black/10 my-3 px-3 text-sm rounded-xl h-12 focus:outline-none focus:border-green-500"
+        className="bg-black/10 my-3 px-3 text-sm rounded-lg h-12 focus:outline-none focus:border-green-500"
       />
       {errors.name && (
         <div className="text-red-500 font-thin text-sm px-2">
@@ -83,7 +83,7 @@ const HireMe = () => {
           },
         })}
         placeholder="Email"
-        className="bg-black/10 my-3 px-3 text-sm rounded-xl h-12 focus:outline-none focus:border-green-500"
+        className="bg-black/10 my-3 px-3 text-sm rounded-lg h-12 focus:outline-none focus:border-green-500"
       />
       {errors.email && (
         <div className="text-red-500 font-thin text-sm px-2">
@@ -94,11 +94,11 @@ const HireMe = () => {
         {...register("serviceType", {
           required: "Srvice type is required",
         })}
-        className="bg-black/10 my-1 px-3 text-sm rounded-xl h-12 focus:outline-none focus:border-green-500"
+        className="bg-black/10 my-1 px-3 text-sm rounded-lg h-12 focus:outline-none focus:border-green-500"
       >
-        <option value="service">Service</option>
+        <option value="Buy Beat">Buy Beat</option>
         <option value="collaboration">Collaboration</option>
-        <option value="tutoring">Tutoring</option>
+        <option value="Mix/mastering">Mix/mastering</option>
       </select>
       {errors.serviceType && (
         <div className="text-red-500 font-thin text-sm px-2">
@@ -110,7 +110,7 @@ const HireMe = () => {
           required: "message is required",
         })}
         placeholder="Message"
-        className="bg-black/10 my-3 p-3 text-sm rounded-xl h-30 focus:outline-none focus:border-green-500"
+        className="bg-black/10 my-3 p-3 text-sm rounded-lg h-30 focus:outline-none focus:border-green-500"
       />
       {errors.message && (
         <div className="text-red-500 font-thin text-sm px-2">
@@ -119,9 +119,9 @@ const HireMe = () => {
       )}
       <button
         type="submit"
-        className="flex cursor-pointer transition-all duration-500 ease-in justify-center items-center my-3 rounded-xl hover:rounded-[8em] h-14 bg-yehuda-black text-white"
+        className="flex cursor-pointer transition-all duration-500 ease-in justify-center items-center my-3 rounded-lg hover:rounded-[8em] h-13 bg-yehuda-black text-white"
       >
-        Send message
+        Send mail
       </button>
     </form>
   );

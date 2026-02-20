@@ -10,6 +10,7 @@ import {
   FaPhone,
   FaLocationArrow,
   FaYoutube,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
@@ -119,9 +120,9 @@ const Main = () => {
         ref={topRef}
         className="flex flex-col items-center relative min-h-screen h-fit"
       >
-        <div className="flex w-[92%] md:w-[60%] info-animation flex-col shrink-0 pt-25 min-h-[50dvh] items-center xl:justify-between lg:items-start ">
+        <div className="flex w-[92%] md:mt-10 md:w-[60%] info-animation flex-col shrink-0 pt-25 min-h-[50dvh] items-center xl:justify-between lg:items-start ">
           <div className="flex justify-center items-center relative w-full rounded-xl text-white bg-linear-to-tr  border-black">
-            <div className="flex justify-center pt-4.5 overflow-hidden items-center relative w-full md:h-70 h-40 rounded-xl text-white ">
+            <div className="flex justify-center md:pt-13 pt-4.5 overflow-hidden items-center relative w-full md:h-70 h-40 rounded-xl text-white ">
               <Image
                 src={"/yehuda.jpg"}
                 height={1000}
@@ -136,7 +137,7 @@ const Main = () => {
               ref={profileRef}
               className="absolute flex justify-center items-center -bottom-8 left-7 md:left-20 h-17 w-17 md:w-24 md:h-24 rounded-full "
             >
-              <div className="rounded-full pt-7 flex justify-center items-center overflow-hidden border-b-green-500 border-t-green-500 w-full h-full ">
+              <div className="rounded-full pt-7 md:pt-13 flex justify-center items-center overflow-hidden border-b-green-500 border-t-green-500 w-full h-full ">
                 <Image
                   src={"/small-image.jpg"}
                   height={1000}
@@ -151,27 +152,27 @@ const Main = () => {
             </div>
           </div>
           <div className="flex flex-col text-yehuda-black items-start h-40 mt-13 px-5 border-gray-500">
-            <div className="fex w-full mb-3">
+            <div className="fex md:text-lg w-full mb-3">
               Hello, I&apos;m{" "}
               <span className="font-semibold">BeatsByYehuda</span>
             </div>
-            <div>
+            <div className="md:text-lg">
               I&apos;m a <span className="font-semibold">Music Producer</span>,
               I specialize in creating catchy afrobeats and I&apos;m also a{" "}
               <span className="font-semibold">mix/master engineer</span>
             </div>
             <div className="flex mt-5  mb-6 justify-between items-center">
-              <div className="bg-yehuda-lightgray mr-4 p-2 rounded-xl">
+              <div className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl">
                 <FaFacebook />
               </div>
-              <div className="bg-yehuda-lightgray mr-4 p-2 rounded-xl">
+              <div className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl">
                 <FaInstagram />
               </div>
 
-              <div className="bg-yehuda-lightgray mr-4 p-2 rounded-xl">
+              <div className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl">
                 <FaXTwitter />
               </div>
-              <div className="bg-yehuda-lightgray mr-4 p-2 rounded-xl">
+              <div className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl">
                 <FaYoutube />
               </div>
             </div>
@@ -180,7 +181,7 @@ const Main = () => {
 
         <div
           ref={projectRef}
-          className="flex items-center md:w-[60%] font-semibold border-black/30 text-yehuda-black justify-center rounded-xl w-[92%] border h-12 flex-col my-5 mt-10"
+          className="flex items-center md:w-[30%] font-semibold border-black/30 text-yehuda-black justify-center rounded-xl w-[92%] border md:mt-5 h-12 flex-col my-5 mt-10"
         >
           Genres I Produce
         </div>
@@ -316,7 +317,7 @@ const Main = () => {
           <FaAngleUp />
         </div>
 
-        <div className="flex md:w-[30%] w-[42%] font-semibold items-center border-black/30 sticky bg-yehuda-black text-white z-60 top-3 shadow-sm justify-center rounded-xl border h-12 flex-col mt-10">
+        <div className="flex md:w-[30%] w-[42%] font-semibold items-center border-black/30 sticky bg-yehuda-black text-white z-60 top-3 shadow-sm justify-center rounded-xl border h-12 mb-8 flex-col mt-10">
           CONTACT
         </div>
         <div
@@ -325,33 +326,61 @@ const Main = () => {
             item9.isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10"
-          } text-sm w-full border-b mx-auto md:w-[60%] text-yehuda-black flex flex-col justify-center md:h-80 items-center py-10 border-b-gray-400 border-t-gray-400`}
+          } text-sm w-full  mx-auto md:w-[60%] text-yehuda-black flex flex-col justify-center md:h-80 items-center py-10 border-b-gray-400 border-t-gray-400`}
         >
-          <div className="flex my-2 items-center w-[90%]">
-            <FaInstagram className="w-[20%] text-lg " />
-            <div className="text-lg"> Yehuda </div>
+          <div className="flex my-2  items-center box-border w-[88%]">
+            <div className="flex shrink-0">
+              <FaInstagram className="text-2xl" />
+            </div>
+
+            <div className="w-[90%] mx-3">
+              <div className="border-b border-yehuda-lightgray"></div>
+            </div>
+            <div className="text-lg ml-auto"> Yehuda </div>
           </div>
-          <div className="flex my-2  items-center w-[90%]">
-            <FaPhone className="w-[20%] text-lg  rotate-90" />
-            <div className="text-lg"> +234 906 481 2779 </div>
+          <div className="flex my-2  items-center w-[88%]">
+            <div className="flex shrink-0 rotate-90">
+              <FaPhone className="text-xl" />
+            </div>
+            <div className="w-[90%] mx-3">
+              <div className="border-b border-yehuda-lightgray"></div>
+            </div>
+            <div className="text-lg ml-auto shrink-0"> +234 813 711 4067 </div>
           </div>
-          <div className="flex my-2 items-center w-[90%]">
-            <FaLocationArrow className="w-[20%] text-lg " />
-            <div className="text-lg"> Kaduna, Nigeria. </div>
+          <div className="flex my-2 items-center w-[88%]">
+            <div className="flex shrink-0">
+              <FaLocationArrow className="text-xl" />
+            </div>
+            <div className="w-[90%] mx-3">
+              <div className="border-b border-yehuda-lightgray"></div>
+            </div>
+            <div className="text-lg ml-auto shrink- flex shrink-0">
+              {" "}
+              Kaduna, Nigeria.{" "}
+            </div>
           </div>
-          <div className="flex my-2  items-center w-[90%]">
-            <BiLogoGmail className="w-[20%] text-lg " />
-            <div className="text-lg"> info.elvisanthony@gmail.com </div>
+          <div className="flex my-2  items-center w-[88%]">
+            <div className="flex shrink-0">
+              <BiLogoGmail className="text-2xl" />
+            </div>
+            <div className="w-[90%] mx-3">
+              <div className="border-b-2 border-yehuda-lightgray"></div>
+            </div>
+            <div className="text-lg ml-auto flex shrink-0">
+              {" "}
+              beatsbyyehuda@gmail.com{" "}
+            </div>
           </div>
-        </div>
-        <div
-          ref={contactMeRef}
-          className="flex font-semibold flex-col mx-auto my-5 mt-8"
-        >
-          CONTACT ME
         </div>
 
-        <HireMe />
+        <button className="flex md:w-[30%] cursor-pointer w-[90%] transition-all duration-500 ease-in justify-center items-center my-3 mb-5 rounded-lg hover:rounded-[8em] h-13 bg-yehuda-black text-white">
+          Send mail
+        </button>
+        <div className="mb-20 cursor-pointer flex flex-col items-center w-full mx-auto">
+          <div className="w-[90%] md:w-[30%] flex items-center justify-center rounded-lg h-13 bg-green-500">
+            <FaWhatsapp className="text-2xl text-white" />
+          </div>
+        </div>
       </main>
     </>
   );
