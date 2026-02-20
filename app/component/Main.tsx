@@ -357,7 +357,7 @@ const Main = () => {
             <div className="w-[90%] mx-3">
               <div className="border-b border-yehuda-lightgray"></div>
             </div>
-            <div className="ml-auto shrink-0"> +234 813 711 4067 </div>
+            <div className="ml-auto shrink-0"> +234 902 339 0682 </div>
           </div>
           <div className="flex my-2 items-center w-[88%]">
             <div className="flex shrink-0">
