@@ -162,19 +162,28 @@ const Main = () => {
               <span className="font-semibold">mix/master engineer</span>
             </div>
             <div className="flex mt-5  mb-6 justify-between items-center">
-              <div className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl">
-                <FaFacebook />
-              </div>
-              <div className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl">
+              <Link
+                target="_blank"
+                href=""
+                className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl"
+              >
                 <FaInstagram />
-              </div>
+              </Link>
 
-              <div className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl">
+              <Link
+                target="_blank"
+                href=""
+                className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl"
+              >
                 <FaXTwitter />
-              </div>
-              <div className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl">
+              </Link>
+              <Link
+                target="_blank"
+                href=""
+                className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl"
+              >
                 <FaYoutube />
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -371,19 +380,30 @@ const Main = () => {
             </div>
             <div className=" ml-auto flex shrink-0">
               {" "}
-              beatsbyyehuda@gmail.com{" "}
+              officialyehuda@gmail.com{" "}
             </div>
           </div>
         </div>
 
-        <button className="flex md:w-[30%] cursor-pointer w-[90%] transition-all duration-500 ease-in justify-center items-center my-3 mb-5 rounded-lg hover:rounded-[8em] h-13 bg-yehuda-black text-white">
-          Send mail
-        </button>
-        <div className="mb-20 cursor-pointer flex flex-col items-center w-full mx-auto">
-          <div className="w-[90%] md:w-[30%] flex items-center justify-center rounded-lg h-13 bg-green-500">
+        <Link
+          target="_blank"
+          href="mailto:officialyehuda@gmail.com"
+          className=" md:w-[60%] lg:w-[30%] w-[90%] "
+        >
+          <button className="flex w-full cursor-pointertransition-all duration-500 ease-in justify-center items-center my-3 mb-5 rounded-lg hover:rounded-[8em] h-13 bg-yehuda-black text-white">
+            Send mail
+          </button>
+        </Link>
+
+        <Link
+          target="_blank"
+          href="https://wa.me/09023390682"
+          className=" md:w-[60%] lg:w-[30%]  w-[90%] "
+        >
+          <div className="w-full mb-20 flex items-center justify-center rounded-lg h-13 bg-green-500">
             <FaWhatsapp className="text-2xl text-white" />
           </div>
-        </div>
+        </Link>
       </main>
     </>
   );
