@@ -317,7 +317,10 @@ const Main = () => {
           <FaAngleUp />
         </div>
 
-        <div className="flex md:w-[30%] w-[42%] font-semibold items-center border-black/30 sticky bg-yehuda-black text-white z-60 top-3 shadow-sm justify-center rounded-xl border h-12 mb-8 flex-col mt-10">
+        <div
+          ref={contactMeRef}
+          className="flex md:w-[30%] w-[42%] font-semibold items-center border-black/30 sticky bg-yehuda-black text-white z-60 top-3 shadow-sm justify-center rounded-xl border h-12 mb-8 flex-col mt-10"
+        >
           CONTACT
         </div>
         <div
