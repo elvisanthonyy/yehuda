@@ -391,7 +391,7 @@ const Main = () => {
           className=" md:w-[60%] lg:w-[30%] w-[90%] "
         >
           <button className="flex w-full cursor-pointertransition-all duration-500 ease-in justify-center items-center my-3 mb-5 rounded-lg hover:rounded-[8em] h-13 bg-yehuda-black text-white">
-            Send mail
+            Send Email
           </button>
         </Link>
 
