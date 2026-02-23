@@ -7,7 +7,7 @@ interface ChildProps {
 
 const Nav = ({ handleScrollToContactMe }: ChildProps) => {
   return (
-    <nav className="flex md:px-[20%] nav-animation text-xl justify-between items-center z-10 px-[5%] absolute top-0 left-0 w-full h-18">
+    <nav className="flex sm:px-[10%] md:px-[20%] nav-animation text-xl justify-between items-center z-10 px-[5%] md:mt-2 absolute top-0 left-0 w-full h-18">
       <div className="">
         <div className="font-bold text-yehuda-black text-xl">BeatsByYehuda</div>
       </div>

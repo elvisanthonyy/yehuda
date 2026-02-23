@@ -8,8 +8,7 @@
 
 @theme {
   --color-first: #1a73e8;
-  --breakpoint-sm: 390px;
-  --breakpoint-md: 520px;
+  --breakpoint-sm: 435px;
 }
 
 @theme inline {

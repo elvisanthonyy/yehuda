@@ -22,6 +22,7 @@ import MusicPlayer from "./MusicPlayer";
 import BeatsLoading from "./loading/BeatsLoading";
 import { FaArrowDown } from "react-icons/fa6";
 import Link from "next/link";
+import Footer from "./Footer";
 
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null);
@@ -65,6 +66,7 @@ const Main = () => {
   const projectRef = useRef<HTMLDivElement>(null);
   const profileRef = useRef<HTMLDivElement>(null);
   const topRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
   const [isButtonsVisible, setIsButtonVisble] = useState(false);
   const [beats, setBeats] = useState<IBeat[] | []>([]);
   const [isMusicPlayerOpen, setIsMusicPlayerOpen] = useState(false);
@@ -81,6 +83,14 @@ const Main = () => {
 
   const handleScrollToTop = () => {
     topRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleScrollToAbout = () => {
+    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleScrollToBeats = () => {
+    projectRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -120,7 +130,10 @@ const Main = () => {
         ref={topRef}
         className="flex flex-col items-center relative min-h-screen h-fit"
       >
-        <div className="flex w-[92%] md:mt-10 md:w-[60%] info-animation flex-col shrink-0 pt-25 min-h-[50dvh] items-center xl:justify-between lg:items-start ">
+        <div
+          ref={aboutRef}
+          className="flex w-[92%] sm:w-[80%] md:mt-10 md:w-[60%]  info-animation flex-col shrink-0 pt-25 min-h-[50dvh] items-center xl:justify-between lg:items-start "
+        >
           <div className="flex justify-center items-center relative w-full rounded-xl text-white bg-linear-to-tr  border-black">
             <div className="flex justify-center md:pt-13 pt-4.5 overflow-hidden items-center relative w-full md:h-70 h-40 rounded-xl text-white ">
               <Image
@@ -151,7 +164,7 @@ const Main = () => {
               <div className="absolute z-30 border-2 shadow-[4px_0_9px_rgba(0,95,238,0.4)] rounded-full ball-animation border-b-blue-600 border-r-blue-600 w-17 h-17 md:w-24 md:h-24 top-0 left-0"></div>
             </div>
           </div>
-          <div className="flex flex-col text-yehuda-black items-start h-40 mt-13 px-5 border-gray-500">
+          <div className="flex flex-col text-yehuda-black items-start min-h-40 mt-13 px-5 border-gray-500">
             <div className="fex md:text-lg w-full mb-3">
               Hello, I&apos;m{" "}
               <span className="font-semibold">BeatsByYehuda</span>
@@ -164,7 +177,7 @@ const Main = () => {
             <div className="flex mt-5  mb-6 justify-between items-center">
               <Link
                 target="_blank"
-                href=""
+                href="https://www.instagram.com/beatsbyehuda?igsh=MWhrdWpiYmQ1YnFzeg%3D%3D&utm_source=qr"
                 className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl"
               >
                 <FaInstagram />
@@ -172,14 +185,14 @@ const Main = () => {
 
               <Link
                 target="_blank"
-                href=""
+                href="https://x.com/beatsbyehuda?s=21"
                 className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl"
               >
                 <FaXTwitter />
               </Link>
               <Link
                 target="_blank"
-                href=""
+                href="https://l.instagram.com/?u=https%3A%2F%2Fyoutube.com%2F%40beatsbyehuda%3Fsi%3DypppTO93I5ywiaim%26fbclid%3DPAZXh0bgNhZW0DMTAwAHNydGMGYXBwX2lkDDI1NjI4MTA0MDU1OAABp3XKMC9k6TJ4u3sVwoDvP-4197jgRuvOt64SHJIrJFfdx4XCgvfdCMDqHzk8_aem_HBtrmTCuC3ivFYJKAMwWrA&e=AT1vq1iV_PJqrxzXzIZfdZowq49KsOHQz_9qWIs-YCR-l7dilDztFgxZSz5bPQ8sTwDxG2Yz2R2z_JIU8KFY2Jo_R1SIvyz_YdxIwcVNMg"
                 className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl"
               >
                 <FaYoutube />
@@ -190,7 +203,7 @@ const Main = () => {
 
         <div
           ref={projectRef}
-          className="flex items-center md:w-[30%] font-semibold border-black/30 text-yehuda-black justify-center rounded-xl w-[92%] border md:mt-5 h-12 flex-col my-5 mt-10"
+          className="flex items-center sm:w-[80%] md:w-[30%] font-semibold border-black/30 text-yehuda-black justify-center rounded-xl w-[92%] border md:mt-5 h-12 flex-col my-5 mt-10"
         >
           Genres I Produce
         </div>
@@ -199,7 +212,7 @@ const Main = () => {
           <FaArrowDown className="text-xl" />
         </div>
         <div
-          className={`transition-all w-[92%] lg:w-[60%] duration-700 ease-in`}
+          className={`transition-all sm:w-[80%] w-[92%] lg:w-[60%] duration-700 ease-in`}
         >
           <div
             ref={item10.ref}
@@ -209,9 +222,9 @@ const Main = () => {
           </div>
           <div
             ref={item3.ref}
-            className={`w-full md:bg-yehuda-black md:h-80 overflow-hidden transition-all duration-700 ease-in ${item3.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center rounded-xl aspect-square bg-yehuda-lightgray mb-5`}
+            className={`w-full sm:bg-yehuda-black sm:h-80 overflow-hidden transition-all duration-700 ease-in ${item3.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center rounded-xl aspect-square bg-yehuda-lightgray mb-5`}
           >
-            <div className="text-2xl overflow-hidden md:h-[80%] md:w-auto md:aspect-square md:rounded-2xl w-full h-full text-white ">
+            <div className="text-2xl sm:overflow-hidden sm:h-[70%] md:h-[80%] sm:w-auto sm:aspect-square sm:rounded-2xl w-full h-full text-white ">
               <Image
                 src={"/genres/afro1.jpg"}
                 height={1000}
@@ -259,9 +272,9 @@ const Main = () => {
           </div>
           <div
             ref={item4.ref}
-            className={`w-full md:bg-yehuda-black md:h-90 overflow-hidden transition-all duration-700 ease-in ${item4.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center rounded-xl aspect-square bg-yehuda-lightgray mb-5`}
+            className={`w-full sm:bg-yehuda-black sm:h-80 overflow-hidden transition-all duration-700 ease-in ${item4.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center rounded-xl aspect-square bg-yehuda-lightgray mb-5`}
           >
-            <div className="text-2xl overflow-hidden rounded-2xl md:h-[80%] md:w-auto md:aspect-square w-full h-full text-white">
+            <div className="text-2xl sm:overflow-hidden sm:h-[70%] md:h-[80%] sm:w-auto sm:aspect-square sm:rounded-2xl w-full h-full text-white">
               <Image
                 src={"/genres/afro2.jpg"}
                 height={1000}
@@ -303,7 +316,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="bg-yehuda-lightgray/80 md:w-[60%] w-[92%] flex flex-col justify-center items-center rounded-lg h-60">
+        <div className="bg-yehuda-lightgray/80 md:w-[60%] sm:w-[80%] w-[92%] flex flex-col justify-center items-center rounded-lg h-60">
           <div className="font-semibold text-lg">Follow me on Youtube</div>
 
           <Link
@@ -311,9 +324,9 @@ const Main = () => {
               "https://l.instagram.com/?u=https%3A%2F%2Fyoutube.com%2F%40beatsbyehuda%3Fsi%3DypppTO93I5ywiaim%26fbclid%3DPAZXh0bgNhZW0DMTAwAHNydGMGYXBwX2lkDDI1NjI4MTA0MDU1OAABp3XKMC9k6TJ4u3sVwoDvP-4197jgRuvOt64SHJIrJFfdx4XCgvfdCMDqHzk8_aem_HBtrmTCuC3ivFYJKAMwWrA&e=AT1vq1iV_PJqrxzXzIZfdZowq49KsOHQz_9qWIs-YCR-l7dilDztFgxZSz5bPQ8sTwDxG2Yz2R2z_JIU8KFY2Jo_R1SIvyz_YdxIwcVNMg"
             }
             target="_blank"
-            className="w-[85%] md:w-[30%]"
+            className="w-[85%]  sm:w-60 md:w-70"
           >
-            <div className="w-full cursor-pointer text-white flex justify-center items-center h-13 bg-red-600 mt-5 rounded-xl">
+            <div className="w-fullcursor-pointer text-white flex justify-center items-center h-13 bg-red-600 mt-5 rounded-xl">
               <FaYoutube className="text-2xl mr-3" />
               <div className=""> BeatsByYehuda</div>
             </div>
@@ -338,7 +351,7 @@ const Main = () => {
             item9.isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10"
-          } text-sm w-full  mx-auto md:w-[60%] text-yehuda-black flex flex-col justify-center md:h-80 items-center py-10 border-b-gray-400 border-t-gray-400`}
+          } text-sm w-full  mx-auto sm:w-[80%] md:w-[60%] text-yehuda-black flex flex-col justify-center md:h-80 items-center py-10 border-b-gray-400 border-t-gray-400`}
         >
           <div className="flex my-2  items-center box-border w-[88%]">
             <div className="flex shrink-0">
@@ -388,7 +401,7 @@ const Main = () => {
         <Link
           target="_blank"
           href="mailto:officialyehuda@gmail.com"
-          className=" md:w-[60%] lg:w-[30%] w-[90%] "
+          className="sm:w-90"
         >
           <button className="flex w-full cursor-pointertransition-all duration-500 ease-in justify-center items-center my-3 mb-5 rounded-lg hover:rounded-[8em] h-13 bg-yehuda-black text-white">
             Send Email
@@ -398,13 +411,18 @@ const Main = () => {
         <Link
           target="_blank"
           href="https://wa.me/09023390682"
-          className=" md:w-[60%] lg:w-[30%]  w-[90%] "
+          className="sm:w-90"
         >
           <div className="w-full mb-20 flex items-center justify-center rounded-lg h-13 bg-green-500">
             <FaWhatsapp className="text-2xl text-white" />
           </div>
         </Link>
       </main>
+      <Footer
+        scrollToHome={handleScrollToTop}
+        scrollToAbout={handleScrollToAbout}
+        scrollToBeats={handleScrollToBeats}
+      />
     </>
   );
 };
