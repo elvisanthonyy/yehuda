@@ -29,10 +29,18 @@ const Footer = ({ scrollToHome, scrollToAbout, scrollToBeats }: ChildProps) => {
         </div>
       </div>
       <div className="text-xl mt-5 border-t border-white py-3 justify-between flex h-10">
-        <Link target="_blank" href="" className="mr-5">
+        <Link
+          target="_blank"
+          href="https://www.instagram.com/beatsbyehuda?igsh=MWhrdWpiYmQ1YnFzeg%3D%3D&utm_source=qr"
+          className="mr-5"
+        >
           <FaInstagram />
         </Link>
-        <Link target="_blank" href="" className="ml-5">
+        <Link
+          target="_blank"
+          href="https://x.com/beatsbyehuda?s=21"
+          className="ml-5"
+        >
           <FaXTwitter />
         </Link>
       </div>
