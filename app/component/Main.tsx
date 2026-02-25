@@ -401,7 +401,7 @@ const Main = () => {
         <Link
           target="_blank"
           href="mailto:officialyehuda@gmail.com"
-          className="sm:w-90"
+          className="sm:w-90 w-[88%]"
         >
           <button className="flex w-full cursor-pointertransition-all duration-500 ease-in justify-center items-center my-3 mb-5 rounded-lg hover:rounded-[8em] h-13 bg-yehuda-black text-white">
             Send Email
@@ -411,7 +411,7 @@ const Main = () => {
         <Link
           target="_blank"
           href="https://wa.me/09023390682"
-          className="sm:w-90"
+          className="sm:w-90 w-[88%]"
         >
           <div className="w-full mb-20 flex items-center justify-center rounded-lg h-13 bg-green-500">
             <FaWhatsapp className="text-2xl text-white" />
