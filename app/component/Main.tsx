@@ -143,7 +143,7 @@ const Main = () => {
       >
         <section
           ref={aboutRef}
-          className="flex w-full sm:w-full md:mt-10 md:w-[60%] info-animation mt-[146px] flex-col shrink-0 min-h-[50dvh] xl:justify-between lg:items-start "
+          className="flex w-full sm:w-full md:mt-10 md:w-[60%] info-animation mt-[130px] flex-col shrink-0 min-h-[50dvh] xl:justify-between lg:items-start "
         >
           <div className="flex justify-center items-center relative w-full rounded-xl text-white bg-linear-to-tr  border-black">
             <div className="flex pt-[48px] justify-center md:pt-13 pt-4.5 overflow-hidden items-center relative w-full md:h-70 h-auto bg-gold-1 aspect-square border-3 border-primary-5 rounded-full text-white ">
@@ -187,14 +187,14 @@ const Main = () => {
 
         <div
           ref={projectRef}
-          className="flex items-between sm:w-[80%] md:w-[30%] font-semibold border-black/30 text-yehuda-black justify-center px-[4px] py-[8px] w-[92%] border-t-2 border-primary-5 md:mt-5 h-[52px] flex-col my-5 mt-[36px]"
+          className="flex items-between w-full md:w-[30%] font-semibold border-black/30 text-yehuda-black justify-center px-[4px] py-[8px] w-[92%] border-t-2 border-primary-5 md:mt-5 h-[52px] flex-col my-5 mt-[36px]"
         >
           <div className="text-20px text-secondary-1">Genres I Produce</div>
           <div></div>
         </div>
 
         <div
-          className={`transition-all sm:w-[80%] w-[92%] lg:w-[60%] duration-700 ease-in`}
+          className={`transition-all w-full lg:w-[60%] duration-700 ease-in`}
         >
           <div
             ref={item3.ref}
@@ -277,7 +277,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="bg-primary-1 border-1 border-primary-5 md:w-[60%] mb-[90px] sm:w-[80%] w-[92%] flex flex-col justify-center items-center rounded-lg h-60">
+        <div className="bg-primary-1 border-1 border-primary-5 md:w-[60%] mb-[90px] sm:w-[80%] w-full flex flex-col justify-center items-center rounded-lg h-60">
           <div className="font-semibold text-lg">Follow me on Youtube</div>
 
           <Link

@@ -85,14 +85,14 @@ const MusicPlayer = ({ beat, setIsMusiPlayerOpen }: ChildProps) => {
   return (
     <div
       onClick={() => setIsMusiPlayerOpen(false)}
-      className="flex items-center justify-center z-71 fixed bottom-0 left-0 md:bg-black/90 md:h-full w-full h-[246px]"
+      className="flex items-center justify-center z-71 fixed top-0 left-0 md:bg-black/90 md:h-full w-full h-full bg-white/10 backdrop-blur-lg"
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="w-full relative md:bg-blue-900 md:rounded-2xl shadow-[0_-6px_20px_rgba(0,0,0,0.15)] bg-primary-1 border-t-2 border-secondary-2 md:border md:border-white/50 py-3 h-full md:w-110 md:h-80 overflow-hidden mt-5"
+        className="w-full bottom-0 absolute md:bg-blue-900 md:rounded-2xl shadow-[0_-6px_20px_rgba(0,0,0,0.15)] bg-primary-1 border-t-1 border-secondary-5 md:border md:border-white/50 py-3 h-[230px] md:w-110 md:h-80 overflow-hidden mt-5"
       >
         <div className="z-10 backdrop-blur-lg bg-white/0 w-full h-full absolute top-0 left-0"></div>
-        
+
         <div className="z-40 flex items-center flex-col py-5 absolute top-[50%] left-[50%] -translate-[50%] w-[90%] flex mx-auto">
           {beat && (
             <audio ref={audioRef} src={beat.audioUrl} preload="metadata" />
@@ -105,7 +105,9 @@ const MusicPlayer = ({ beat, setIsMusiPlayerOpen }: ChildProps) => {
             >
               <FaTimes />
             </div>
-            <div className="mb-5 mt-4 text-[20px] text-secondary-3">{beat?.name}</div>
+            <div className="mb-5 mt-4 text-[20px] text-secondary-3">
+              {beat?.name}
+            </div>
             <input
               value={currentTime}
               min={0}
