@@ -11,24 +11,9 @@ interface ChildProps {
 
 const Footer = ({ scrollToHome, scrollToAbout, scrollToBeats }: ChildProps) => {
   return (
-    <footer className="flex px-5 py-10 flex-col items-center justify-evenly text-white/90 bg-yehuda-black w-full min-h-100">
-      <div className="text-xl font-bold pb-4">BeatByYehuda</div>
-      <div>Creative beats</div>
-      <div className="h-20 text-sm mt-5 text-center items-center flex flex-col justify-evenly">
-        <div
-          onClick={scrollToAbout}
-          className="cursor-pointer hover:text-blue-500"
-        >
-          About
-        </div>
-        <div
-          onClick={scrollToBeats}
-          className="cursor-pointer hover:text-blue-500"
-        >
-          My Beats
-        </div>
-      </div>
-      <div className="text-xl mt-5 border-t border-white py-3 justify-between flex h-10">
+    <footer className="flex relative left-[50%] mb-[64px] -translate-x-[50%] flex-col items-center justify-center text-white/90 bg-secondary-2 rounded-[32px] w-[170px] h-[53px]">
+      
+      <div className="text-xl items-center text-primary-2 justify-between flex h-10">
         <Link
           target="_blank"
           href="https://www.instagram.com/beatsbyehuda?igsh=MWhrdWpiYmQ1YnFzeg%3D%3D&utm_source=qr"
@@ -44,10 +29,7 @@ const Footer = ({ scrollToHome, scrollToAbout, scrollToBeats }: ChildProps) => {
           <FaXTwitter />
         </Link>
       </div>
-      <div className="text-sm text-white/50">
-        {" "}
-        &copy; 2025. All rights reserved{" "}
-      </div>
+      
     </footer>
   );
 };

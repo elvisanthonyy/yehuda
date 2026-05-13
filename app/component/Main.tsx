@@ -126,122 +126,93 @@ const Main = () => {
       {isMusicPlayerOpen && (
         <MusicPlayer setIsMusiPlayerOpen={setIsMusicPlayerOpen} beat={beat} />
       )}
+      <div className="w-full h-full absolute overflow-hidden">
+        <div className="border-t-1 w-[200%] relative top-30 mb-25 border-gold-1/50 rotate-33"></div>
+        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60  border-secondary-2/40 rotate-33"></div>
+        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60 border-secondary-2/40 rotate-33"></div>
+        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60 border-secondary-2/40 rotate-33"></div>
+        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60 border-gold-1/40 rotate-33"></div>
+        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60 h-40 border-secondary-2/40 rotate-33"></div>
+        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60 border-secondary-2/40 rotate-33"></div>
+        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60 border-gold-1/40 rotate-33"></div>
+        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60 h-40 border-secondary-2/40 rotate-33"></div>
+      </div>
       <main
         ref={topRef}
-        className="flex flex-col items-center relative min-h-screen h-fit"
+        className="flex flex-col items-center relative min-h-screen h-fit px-[16px]"
       >
-        <div
+        <section
           ref={aboutRef}
-          className="flex w-[92%] sm:w-[80%] md:mt-10 md:w-[60%]  info-animation flex-col shrink-0 pt-25 min-h-[50dvh] items-center xl:justify-between lg:items-start "
+          className="flex w-full sm:w-full md:mt-10 md:w-[60%] info-animation mt-[146px] flex-col shrink-0 min-h-[50dvh] xl:justify-between lg:items-start "
         >
           <div className="flex justify-center items-center relative w-full rounded-xl text-white bg-linear-to-tr  border-black">
-            <div className="flex justify-center md:pt-13 pt-4.5 overflow-hidden items-center relative w-full md:h-70 h-40 rounded-xl text-white ">
+            <div className="flex pt-[48px] justify-center md:pt-13 pt-4.5 overflow-hidden items-center relative w-full md:h-70 h-auto bg-gold-1 aspect-square border-3 border-primary-5 rounded-full text-white ">
               <Image
-                src={"/yehuda.jpg"}
+                src={"/yehuda.png"}
                 height={1000}
                 width={1000}
                 draggable={false}
                 alt="afro"
-                className="w-full object-fill"
+                className="h-[160%] object-cover"
               />
             </div>
-
-            <div
-              ref={profileRef}
-              className="absolute flex justify-center items-center -bottom-8 left-7 md:left-20 h-17 w-17 md:w-24 md:h-24 rounded-full "
-            >
-              <div className="rounded-full pt-7 md:pt-13 flex justify-center items-center overflow-hidden border-b-green-500 border-t-green-500 w-full h-full ">
-                <Image
-                  src={"/small-image.jpg"}
-                  height={1000}
-                  width={1000}
-                  draggable={false}
-                  alt="image"
-                  className="w-full"
-                />
+          </div>
+          <div className="mt-[40px] w-full px-[16px]">
+            <div>
+              <div className="text-[32px] w-[70%] text-secondary-2 font-semibold">
+                Hi There, I'm{" "}
+                <span className="text-gold-1 text-[36px]">Yehuda</span>
               </div>
-
-              <div className="absolute z-30 border-2 shadow-[4px_0_9px_rgba(0,95,238,0.4)] rounded-full ball-animation border-b-blue-600 border-r-blue-600 w-17 h-17 md:w-24 md:h-24 top-0 left-0"></div>
+              <div className="w-full border-b-2 border-t-2 py-[8px] mt-[16px] text-center border-gold-2 ">
+                I'm a Music Producer
+              </div>
+              <div>
+                <div></div>
+                <div className=" text-[16px] mt-[16px] text-secondary-3">
+                  Kaduna, Nigeria.
+                </div>
+              </div>
+              <div>
+                <div></div>
+                <div className=" text-[16px] mt-[16px] text-secondary-3">
+                  officialyehuda@gmail.com
+                </div>
+              </div>
+            </div>
+            <div className="mt-[24px] text-[20px] h-[72px] w-full bg-secondary-2 flex items-center justify-center text-primary-2 font-semibold rounded-[64px]">
+              Contact Me
             </div>
           </div>
-          <div className="flex flex-col text-yehuda-black items-start min-h-40 mt-13 px-5 border-gray-500">
-            <div className="fex md:text-lg w-full mb-3">
-              Hello, I&apos;m{" "}
-              <span className="font-semibold">BeatsByYehuda</span>
-            </div>
-            <div className="md:text-lg">
-              I&apos;m a <span className="font-semibold">Music Producer</span>,
-              I specialize in creating catchy afrobeats and I&apos;m also a{" "}
-              <span className="font-semibold">mix/master engineer</span>
-            </div>
-            <div className="flex mt-5  mb-6 justify-between items-center">
-              <Link
-                target="_blank"
-                href="https://www.instagram.com/beatsbyehuda?igsh=MWhrdWpiYmQ1YnFzeg%3D%3D&utm_source=qr"
-                className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl"
-              >
-                <FaInstagram />
-              </Link>
-
-              <Link
-                target="_blank"
-                href="https://x.com/beatsbyehuda?s=21"
-                className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl"
-              >
-                <FaXTwitter />
-              </Link>
-              <Link
-                target="_blank"
-                href="https://l.instagram.com/?u=https%3A%2F%2Fyoutube.com%2F%40beatsbyehuda%3Fsi%3DypppTO93I5ywiaim%26fbclid%3DPAZXh0bgNhZW0DMTAwAHNydGMGYXBwX2lkDDI1NjI4MTA0MDU1OAABp3XKMC9k6TJ4u3sVwoDvP-4197jgRuvOt64SHJIrJFfdx4XCgvfdCMDqHzk8_aem_HBtrmTCuC3ivFYJKAMwWrA&e=AT1vq1iV_PJqrxzXzIZfdZowq49KsOHQz_9qWIs-YCR-l7dilDztFgxZSz5bPQ8sTwDxG2Yz2R2z_JIU8KFY2Jo_R1SIvyz_YdxIwcVNMg"
-                className="bg-yehuda-lightgray md:mr-8 mr-4 md:p-3 md:rounded-2xl md:text-xl p-2 rounded-xl"
-              >
-                <FaYoutube />
-              </Link>
-            </div>
-          </div>
-        </div>
+        </section>
 
         <div
           ref={projectRef}
-          className="flex items-center sm:w-[80%] md:w-[30%] font-semibold border-black/30 text-yehuda-black justify-center rounded-xl w-[92%] border md:mt-5 h-12 flex-col my-5 mt-10"
+          className="flex items-between sm:w-[80%] md:w-[30%] font-semibold border-black/30 text-yehuda-black justify-center px-[4px] py-[8px] w-[92%] border-t-2 border-primary-5 md:mt-5 h-[52px] flex-col my-5 mt-[36px]"
         >
-          Genres I Produce
+          <div className="text-20px text-secondary-1">Genres I Produce</div>
+          <div></div>
         </div>
 
-        <div className="flex items-center font-semibold border-black/30 text-yehuda-black justify-center rounded-xl w-[92%] flex-col">
-          <FaArrowDown className="text-xl" />
-        </div>
         <div
           className={`transition-all sm:w-[80%] w-[92%] lg:w-[60%] duration-700 ease-in`}
         >
           <div
-            ref={item10.ref}
-            className="flex sticky  border-black/30 border shadow-sm  font-semibold top-3 z-60 mx-auto bg-yehuda-black text-white w-[50%] items-center justify-center rounded-xl h-12 flex-col mt-2 mb-5"
-          >
-            Afro Beats
-          </div>
-          <div
             ref={item3.ref}
-            className={`w-full sm:bg-yehuda-black sm:h-80 overflow-hidden transition-all duration-700 ease-in ${item3.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center rounded-xl aspect-square bg-yehuda-lightgray mb-5`}
+            className={`w-full transition-all duration-700 ease-in ${item3.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center mb-5`}
           >
-            <div className="text-2xl sm:overflow-hidden sm:h-[70%] md:h-[80%] sm:w-auto sm:aspect-square sm:rounded-2xl w-full h-full text-white ">
-              <Image
-                src={"/genres/afro1.jpg"}
-                height={1000}
-                width={1000}
-                draggable={false}
-                alt="afro"
-                className="w-full h-full object-cover"
-              />
+            <div className="text-2xl flex items-center justify-center relative overflow-hidden bg-primary-3 border-1 border-primary-5 sm:overflow-hidden sm:h-[70%] md:h-[80%] 2xl w-full h-[246px] text-white h-[246px] rounded-[4px]">
+              <div className="absolute h-[102px] -bottom-10 -left-10 w-[118px] bg-gold-4 rounded-[120%]"></div>
+              <div className="absolute h-[102px] -top-10 -right-10 w-[118px] bg-secondary-4 rounded-[120%]"></div>
+              <div>Afro Beats</div>
             </div>
           </div>
 
-          <div ref={item5.ref} className="w-full min-h-60">
+          <div ref={item5.ref} className="w-full h-auto">
             {beatsLoading ? (
               <BeatsLoading />
             ) : (
               <div
-                className={`w-full h-60 md:h-90 overflow-y-auto no-scrollbar flex transition-all ${item5.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
+                className={`w-full h-[214px] border-b-2 border-primary-5 overflow-x-auto overflow-y-hidden no-scrollbar flex transition-all ${item5.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
               >
                 {beats
                   .filter((beat) => beat.category === "afrobeats")
@@ -252,7 +223,7 @@ const Main = () => {
                         setIsMusicPlayerOpen(true);
                       }}
                       key={beat._id?.toString()}
-                      className="flex shrink-0 md:w-70 md:h-70 w-40 h-40 mr-3"
+                      className="flex shrink-0 md:w-70 md:h-70 w-[170px] h-[198px] mr-[8px]"
                     >
                       <Beats
                         beat={beat}
@@ -264,29 +235,19 @@ const Main = () => {
               </div>
             )}
           </div>
-          <div
-            ref={item2.ref}
-            className="flex sticky top-3 z-60 shadow-md bg-yehuda-black mx-auto text-white font-semibold w-[50%] items-center border-black/30 justify-center rounded-xl border h-12 flex-col mb-5"
-          >
-            Afro Fusion
-          </div>
+
           <div
             ref={item4.ref}
-            className={`w-full sm:bg-yehuda-black sm:h-80 overflow-hidden transition-all duration-700 ease-in ${item4.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center rounded-xl aspect-square bg-yehuda-lightgray mb-5`}
+            className={`w-full transition-all duration-700 ease-in ${item4.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center mt-[32px]`}
           >
-            <div className="text-2xl sm:overflow-hidden sm:h-[70%] md:h-[80%] sm:w-auto sm:aspect-square sm:rounded-2xl w-full h-full text-white">
-              <Image
-                src={"/genres/afro2.jpg"}
-                height={1000}
-                width={1000}
-                draggable={false}
-                alt="afro"
-                className="w-full h-full object-cover"
-              />
+            <div className="text-2xl flex items-center justify-center relative overflow-hidden bg-primary-3 border-1 border-primary-5 sm:overflow-hidden sm:h-[70%] md:h-[80%] 2xl w-full h-[246px] text-white h-[246px] rounded-[4px]">
+              <div className="absolute h-[102px] -top-10 -left-10 w-[118px] bg-gold-4 rounded-[120%]"></div>
+              <div className="absolute h-[102px] -bottom-10 -right-10 w-[118px] bg-secondary-4 rounded-[120%]"></div>
+              <div>Afro Fusion</div>
             </div>
           </div>
 
-          <div ref={item6.ref} className="w-full min-h-60 ">
+          <div ref={item6.ref} className="w-full min-h-60 mt-[16px]">
             {beatsLoading ? (
               <BeatsLoading />
             ) : (
@@ -316,7 +277,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="bg-yehuda-lightgray/80 md:w-[60%] sm:w-[80%] w-[92%] flex flex-col justify-center items-center rounded-lg h-60">
+        <div className="bg-primary-1 border-1 border-primary-5 md:w-[60%] mb-[90px] sm:w-[80%] w-[92%] flex flex-col justify-center items-center rounded-lg h-60">
           <div className="font-semibold text-lg">Follow me on Youtube</div>
 
           <Link
@@ -338,85 +299,6 @@ const Main = () => {
         >
           <FaAngleUp />
         </div>
-
-        <div
-          ref={contactMeRef}
-          className="flex md:w-[30%] w-[42%] font-semibold items-center border-black/30 sticky bg-yehuda-black text-white z-60 top-3 shadow-sm justify-center rounded-xl border h-12 mb-8 flex-col mt-10"
-        >
-          CONTACT
-        </div>
-        <div
-          ref={item9.ref}
-          className={`transition-all duration-700 ease-in ${
-            item9.isVisible
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-10"
-          } text-sm w-full  mx-auto sm:w-[80%] md:w-[60%] text-yehuda-black flex flex-col justify-center md:h-80 items-center py-10 border-b-gray-400 border-t-gray-400`}
-        >
-          <div className="flex my-2  items-center box-border w-[88%]">
-            <div className="flex shrink-0">
-              <FaInstagram className="text-lg" />
-            </div>
-
-            <div className="w-[90%] mx-3">
-              <div className="border-b border-yehuda-lightgray"></div>
-            </div>
-            <div className="ml-auto"> Yehuda </div>
-          </div>
-          <div className="flex my-2  items-center w-[88%]">
-            <div className="flex shrink-0 rotate-90">
-              <FaPhone className="text-lg" />
-            </div>
-            <div className="w-[90%] mx-3">
-              <div className="border-b border-yehuda-lightgray"></div>
-            </div>
-            <div className="ml-auto shrink-0"> +234 902 339 0682 </div>
-          </div>
-          <div className="flex my-2 items-center w-[88%]">
-            <div className="flex shrink-0">
-              <FaLocationArrow className="text-lg" />
-            </div>
-            <div className="w-[90%] mx-3">
-              <div className="border-b border-yehuda-lightgray"></div>
-            </div>
-            <div className="ml-auto shrink- flex shrink-0">
-              {" "}
-              Kaduna, Nigeria.{" "}
-            </div>
-          </div>
-          <div className="flex my-2  items-center w-[88%]">
-            <div className="flex shrink-0">
-              <BiLogoGmail className="text-lg" />
-            </div>
-            <div className="w-[90%] mx-3">
-              <div className="border-b-2 border-yehuda-lightgray"></div>
-            </div>
-            <div className=" ml-auto flex shrink-0">
-              {" "}
-              officialyehuda@gmail.com{" "}
-            </div>
-          </div>
-        </div>
-
-        <Link
-          target="_blank"
-          href="mailto:officialyehuda@gmail.com"
-          className="sm:w-90 w-[88%]"
-        >
-          <button className="flex w-full cursor-pointertransition-all duration-500 ease-in justify-center items-center my-3 mb-5 rounded-lg hover:rounded-[8em] h-13 bg-yehuda-black text-white">
-            Send Email
-          </button>
-        </Link>
-
-        <Link
-          target="_blank"
-          href="https://wa.me/09023390682"
-          className="sm:w-90 w-[88%]"
-        >
-          <div className="w-full mb-20 flex items-center justify-center rounded-lg h-13 bg-green-500">
-            <FaWhatsapp className="text-2xl text-white" />
-          </div>
-        </Link>
       </main>
       <Footer
         scrollToHome={handleScrollToTop}

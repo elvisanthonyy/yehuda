@@ -18,6 +18,22 @@
   --font-mono: var(--font-geist-mono);
   --color-yehuda-black: #1b1b1b;
   --color-yehuda-lightgray: #e4e4e4;
+  --color-primary-1: #000000;
+  --color-primary-2: #0F0F0F;
+  --color-primary-3: #252424;
+  --color-primary-4: #424242;
+  --color-primary-5: #676767;
+  --color-secondary-1: #FFFFFF;
+  --color-secondary-2: #EEEEEE;
+  --color-secondary-3: #D8D8D8;
+  --color-secondary-4: #B7B7B7;
+  --color-secondary-5: #989898;
+  --color-gold-1: #FFD700;
+  --color-gold-2: #F6D628;
+  --color-gold-3: #FFE247;
+  --color-gold-4: #FFE971;
+  --color-gold-5: #FFF2AF;
+  
 }
 
 .helper {
@@ -32,8 +48,8 @@
 }
 
 body {
-  background: white;
-  color: var(--background);
+  background: #0F0F0F;
+  color: #D8D8D8;
   font-family: Arial, Helvetica, sans-serif;
 }
 
