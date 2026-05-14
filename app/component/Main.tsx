@@ -4,14 +4,7 @@ import Image from "next/image";
 import Nav from "./Nav";
 import api from "@/libs/api";
 import { IBeat } from "@/models/beat";
-import {
-  FaInstagram,
-  FaFacebook,
-  FaPhone,
-  FaLocationArrow,
-  FaYoutube,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaAngleUp } from "react-icons/fa";
@@ -166,31 +159,66 @@ const Main = () => {
               <div className="w-full border-b-2 border-t-2 py-[8px] mt-[16px] text-center border-gold-2 ">
                 I'm a Music Producer
               </div>
-              <div>
-                <div></div>
-                <div className=" text-[16px] mt-[16px] text-secondary-3">
+              <div className="flex h-[32px] mt-[16px] items-center">
+                <div className="h-[23px] w-[18px] mr-[16px]">
+                  <Image
+                    src={"/icons/location.svg"}
+                    height={100}
+                    width={100}
+                    alt="location icon"
+                    className="h-full"
+                  />{" "}
+                </div>
+                <div className=" text-[16px] text-secondary-3">
                   Kaduna, Nigeria.
                 </div>
               </div>
-              <div>
-                <div></div>
-                <div className=" text-[16px] mt-[16px] text-secondary-3">
+              <div className="flex h-[32px] mt-[16px] items-center">
+                <div className="h-[23px] w-[18px] mr-[16px]">
+                  <Image
+                    src={"/icons/email.svg"}
+                    height={100}
+                    width={100}
+                    alt="location icon"
+                    className="h-full"
+                  />{" "}
+                </div>
+                <div className=" text-[16px] text-secondary-3">
                   officialyehuda@gmail.com
                 </div>
               </div>
             </div>
             <div className="mt-[24px] text-[20px] h-[72px] w-full bg-secondary-2 flex items-center justify-center text-primary-2 font-semibold rounded-[64px]">
-              Contact Me
+              <div className="mr-[16px]">Contact Me</div>
+              <div className="h-[28px] w-[28px] mr-[16px]">
+                <Image
+                  src={"/icons/message.svg"}
+                  height={100}
+                  width={100}
+                  alt="location icon"
+                  className="h-full"
+                />{" "}
+              </div>
             </div>
           </div>
         </section>
 
         <div
           ref={projectRef}
-          className="flex items-between w-full md:w-[30%] font-semibold border-black/30 text-yehuda-black justify-center px-[4px] py-[8px] w-[92%] border-t-2 border-primary-5 md:mt-5 h-[52px] flex-col my-5 mt-[36px]"
+          className="flex flex-row items-center justify-between w-full md:w-[30%] font-semibold border-black/30 text-yehuda-black px-[4px] py-[8px] w-[92%] border-t-2 border-primary-5 md:mt-5 h-[52px] flex-col my-5 mt-[36px]"
         >
-          <div className="text-20px text-secondary-1">Genres I Produce</div>
-          <div></div>
+          <div className="text-[20px] text-secondary-1">Genres I Produce</div>
+          <div>
+            <div className="h-[36px] w-[36px] mr-[16px]">
+              <Image
+                src={"/icons/music.svg"}
+                height={100}
+                width={100}
+                alt="location icon"
+                className="h-full"
+              />{" "}
+            </div>
+          </div>
         </div>
 
         <div
