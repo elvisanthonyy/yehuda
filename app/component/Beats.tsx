@@ -31,9 +31,9 @@ const Beats = ({ beat, setBeat, setIsMusicPlayerOpen }: ChildProps) => {
         </div>
         <div
           //onClick={setMusicPlayer}
-          className="flex text-xl text-white justify-center absolute w-[80px] h-[80px] py-3 rounded-full backdrop-blur-2xl flex-col bg-black/20 items-center z-40 top-[50%] left-[50%] -translate-[50%]"
+          className="flex text-xl text-white justify-center absolute w-[64px] h-[64px] py-3 rounded-full backdrop-blur-2xl flex-col bg-black/20 items-center z-40 top-[50%] left-[50%] -translate-[50%]"
         >
-          <div className="h-[32px] w-[32px]">
+          <div className="h-[24px] w-[24px]">
             <Image
               src={"/icons/play.svg"}
               height={100}

@@ -249,7 +249,7 @@ const Main = () => {
               <BeatsLoading />
             ) : (
               <div
-                className={`w-full h-[214px] border-b-2 border-primary-5 overflow-x-auto overflow-y-hidden no-scrollbar flex transition-all ${item5.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
+                className={`w-full h-[222px] border-b-2 border-primary-5 overflow-x-auto overflow-y-hidden no-scrollbar flex transition-all ${item5.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
               >
                 {beats
                   .filter((beat) => beat.category === "afrobeats")
@@ -293,12 +293,12 @@ const Main = () => {
             </div>
           </div>
 
-          <div ref={item6.ref} className="w-full min-h-60 mt-[16px]">
+          <div ref={item6.ref} className="w-full mt-[16px]">
             {beatsLoading ? (
               <BeatsLoading />
             ) : (
               <div
-                className={`w-full md:h-90 overflow-y-auto no-scrollbar flex h-60 transition-all ${item6.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
+                className={`w-full h-[222px] border-b-2 border-primary-5 md:h-90 overflow-y-auto no-scrollbar flex h-60 transition-all ${item6.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
               >
                 {beats
                   .filter((beat) => beat.category === "afrofusion")
@@ -309,7 +309,7 @@ const Main = () => {
                         setIsMusicPlayerOpen(true);
                       }}
                       key={beat._id?.toString()}
-                      className="flex shrink-0 md:w-70 md:h-70 w-40 h-40 mr-2"
+                      className="flex shrink-0 md:w-70 md:h-70 w-[170px] h-[198px] mr-[8px] mr-2"
                     >
                       <Beats
                         beat={beat}
@@ -323,7 +323,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="bg-primary-1 border-1 border-primary-5 md:w-[60%] mb-[90px] sm:w-[80%] w-full flex flex-col justify-center items-center rounded-lg h-60">
+        <div className="bg-primary-1 mt-[32px] border-1 border-primary-5 md:w-[60%] mb-[90px] sm:w-[80%] w-full flex flex-col justify-center items-center rounded-lg h-60">
           <div className="font-semibold text-lg">Follow me on Youtube</div>
 
           <Link
