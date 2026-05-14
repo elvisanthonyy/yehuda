@@ -141,14 +141,14 @@ const Main = () => {
       </div>
       <main
         ref={topRef}
-        className="flex flex-col items-center relative min-h-screen h-fit px-[16px]"
+        className="flex flex-col items-center relative min-h-screen h-fit px-[16px] md:px-[168px]"
       >
         <section
           ref={aboutRef}
-          className="flex w-full sm:w-full md:mt-10 md:w-[60%] info-animation mt-[122px] flex-col shrink-0 min-h-[50dvh] xl:justify-between lg:items-start "
+          className="flex relative w-full md:flex-row sm:w-full info-animation mt-[122px] md:mt-[156px] flex-col shrink-0 min-h-[50dvh] xl:justify-between lg:items-center "
         >
-          <div className="flex justify-center items-center relative w-full rounded-xl text-white bg-linear-to-tr  border-black">
-            <div className="flex pt-[48px] justify-center md:pt-13 pt-4.5 overflow-hidden items-center relative w-full md:h-70 h-auto bg-gold-1 aspect-square border-3 border-primary-5 rounded-full text-white ">
+          <div className="flex order-2 md:top-0 md:right-0 justify-center items-center relative w-full md:w-[45%] rounded-xl text-white bg-linear-to-tr  border-black">
+            <div className="flex pt-[48px] justify-center md:pt-13 pt-4.5 overflow-hidden items-center relative w-full h-auto bg-gold-1 aspect-square border-3 border-primary-5 rounded-full text-white ">
               <Image
                 src={"/yehuda.png"}
                 height={1000}
@@ -159,13 +159,15 @@ const Main = () => {
               />
             </div>
           </div>
-          <div className="mt-[40px] w-full">
+          <div className="mt-[40px] order-1 flex flex-col w-full md:w-[45%]">
             <div className="px-[16px]">
-              <div className="text-[32px] w-[70%] text-secondary-2 font-semibold">
-                Hi There, I'm{" "}
-                <span className="text-gold-1 text-[36px]">Yehuda</span>
+              <div className="text-[32px] md:text-[60px] w-[70%] md:w-full text-secondary-2 font-semibold">
+                Hi There, I'm <br />
+                <span className="text-gold-1 text-[36px] md:text-[60px]">
+                  Yehuda
+                </span>
               </div>
-              <div className="w-full border-b-2 border-t-2 py-[8px] mt-[16px] text-center border-gold-2 ">
+              <div className="w-full md:text-[24px] border-b-2 border-t-2 py-[8px] mt-[16px] text-center border-gold-2 ">
                 I'm a Music Producer
               </div>
               <div className="flex h-[32px] mt-[16px] items-center">
@@ -197,8 +199,10 @@ const Main = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-[24px] text-[20px] h-[72px] w-full bg-secondary-2 flex items-center justify-center text-primary-2 font-semibold rounded-[64px]">
-              <div className="mr-[16px]">Contact Me</div>
+            <div className="mt-[24px] tansition-all ease-in duration-500 md:w-[444px] hover:text-secondary-2 cursor-pointer hover:bg-white/0 hover:border-1 hover:border-secondary-2 text-[20px] md:text-[24px] h-[72px] w-full bg-secondary-2 flex items-center justify-center text-primary-2 font-semibold rounded-[64px]">
+              <div className="mr-[16px] tansition-all ease-in duration-500 ">
+                Contact Me
+              </div>
               <div className="h-[28px] w-[28px] mr-[16px]">
                 <Image
                   src={"/icons/message.svg"}
@@ -214,7 +218,7 @@ const Main = () => {
 
         <div
           ref={projectRef}
-          className="flex flex-row items-center justify-between w-full md:w-[30%] font-semibold border-black/30 text-yehuda-black px-[4px] py-[8px] w-[92%] border-t-2 border-primary-5 md:mt-5 h-[52px] flex-col my-5 mt-[36px]"
+          className="flex flex-row items-center justify-between md:mt-[68px] w-full px-[32px] font-semibold border-black/30 text-yehuda-black px-[4px] py-[8px] w-[92%] border-t-2 border-primary-5 md:border-t-0 border-l-[3px] border-r-[3px] md:mt-5 h-[52px] flex-col my-5 mt-[36px]"
         >
           <div className="text-[20px] text-secondary-1">Genres I Produce</div>
           <div>
@@ -230,9 +234,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div
-          className={`transition-all w-full lg:w-[60%] duration-700 ease-in`}
-        >
+        <div className={`transition-all w-full duration-700 ease-in`}>
           <div
             ref={item3.ref}
             className={`w-full transition-all duration-700 ease-in ${item3.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center mb-5`}
