@@ -41,7 +41,7 @@ const Nav = ({
         ></span>
       </div>
       <div
-        className={`absolute md:sticky gap-y-[32px] md:gap-y-[0px] md:w-fit hidden md:flex transition-all ease-in duration-500 w-full grid ${isMenuOpen ? "tranlate-x-0" : "-translate-x-1000 md:translate-x-0"} place-items-center place-content-center left-0 border-b-1 md:border-0 border-primary-5 top-[80px] md:top-0 h-[448px] md:h-fit md:items-center md:items-center bg-primary-1`}
+        className={`absolute md:sticky gap-y-[32px] md:gap-y-[0px] md:w-fit md:flex transition-all ease-in duration-500 w-full grid ${isMenuOpen ? "tranlate-x-0" : "-translate-x-1000 md:translate-x-0"} place-items-center place-content-center left-0 border-b-1 md:border-0 border-primary-5 top-[72px] md:top-0 h-[448px] md:h-fit md:items-center md:items-center bg-primary-1`}
       >
         <div className="flex justify-center hover:bg-white hover:text-primary-2 hover:px-[36px] tansition-all ease-in duration-500 cursor-pointer items-center text-[16px] h-[48px] rounded-[32px] px-[32px]">
           Home
