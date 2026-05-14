@@ -31,9 +31,17 @@ const Beats = ({ beat, setBeat, setIsMusicPlayerOpen }: ChildProps) => {
         </div>
         <div
           //onClick={setMusicPlayer}
-          className="flex text-xl text-white justify-center absolute w-13 h-13 py-3 rounded-full backdrop-blur-2xl flex-col bg-black/20 items-center z-40 top-[50%] left-[50%] -translate-[50%]"
+          className="flex text-xl text-white justify-center absolute w-[80px] h-[80px] py-3 rounded-full backdrop-blur-2xl flex-col bg-black/20 items-center z-40 top-[50%] left-[50%] -translate-[50%]"
         >
-          <FaPlay />
+          <div className="h-[32px] w-[32px]">
+            <Image
+              src={"/icons/play.svg"}
+              height={100}
+              width={100}
+              alt="location icon"
+              className="h-full"
+            />{" "}
+          </div>
         </div>
       </div>
       <div className="w-full md:text-sm text-secondary-2 text-[16px] overflow-hidden h-10 whitespace-nowrap text-ellipsis border-yehuda-black/30 flex flex-nowrap items-end z-40">

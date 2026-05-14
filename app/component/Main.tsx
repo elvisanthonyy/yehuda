@@ -150,8 +150,8 @@ const Main = () => {
               />
             </div>
           </div>
-          <div className="mt-[40px] w-full px-[16px]">
-            <div>
+          <div className="mt-[40px] w-full">
+            <div className="px-[16px]">
               <div className="text-[32px] w-[70%] text-secondary-2 font-semibold">
                 Hi There, I'm{" "}
                 <span className="text-gold-1 text-[36px]">Yehuda</span>
@@ -228,10 +228,19 @@ const Main = () => {
             ref={item3.ref}
             className={`w-full transition-all duration-700 ease-in ${item3.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center mb-5`}
           >
-            <div className="text-2xl flex items-center justify-center relative overflow-hidden bg-primary-3 border-1 border-primary-5 sm:overflow-hidden sm:h-[70%] md:h-[80%] 2xl w-full h-[246px] text-white h-[246px] rounded-[4px]">
+            <div className="text-2xl bg-gradient-to-b from-primary-1 to-primary-3 flex flex-col items-center justify-center relative overflow-hidden border-1 border-primary-5 sm:overflow-hidden sm:h-[70%] md:h-[80%] 2xl w-full h-[246px] text-white h-[246px] rounded-[4px]">
               <div className="absolute h-[102px] -bottom-10 -left-10 w-[118px] bg-gold-4 rounded-[120%]"></div>
               <div className="absolute h-[102px] -top-10 -right-10 w-[118px] bg-secondary-4 rounded-[120%]"></div>
               <div>Afro Beats</div>
+              <div className="h-[70px] w-[70px] mt-[16px]">
+                <Image
+                  src={"/icons/drums.svg"}
+                  height={100}
+                  width={100}
+                  alt="location icon"
+                  className="h-full"
+                />{" "}
+              </div>
             </div>
           </div>
 
@@ -268,10 +277,19 @@ const Main = () => {
             ref={item4.ref}
             className={`w-full transition-all duration-700 ease-in ${item4.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center mt-[32px]`}
           >
-            <div className="text-2xl flex items-center justify-center relative overflow-hidden bg-primary-3 border-1 border-primary-5 sm:overflow-hidden sm:h-[70%] md:h-[80%] 2xl w-full h-[246px] text-white h-[246px] rounded-[4px]">
+            <div className="text-2xl bg-gradient-to-b from-primary-1 to-primary-3 flex flex-col items-center justify-center relative overflow-hidden border-1 border-primary-5 sm:overflow-hidden sm:h-[70%] md:h-[80%] 2xl w-full h-[246px] text-white h-[246px] rounded-[4px]">
               <div className="absolute h-[102px] -top-10 -left-10 w-[118px] bg-gold-4 rounded-[120%]"></div>
               <div className="absolute h-[102px] -bottom-10 -right-10 w-[118px] bg-secondary-4 rounded-[120%]"></div>
               <div>Afro Fusion</div>
+              <div className="h-[70px] w-[70px] mt-[16px]">
+                <Image
+                  src={"/icons/piano.svg"}
+                  height={100}
+                  width={100}
+                  alt="location icon"
+                  className="h-full"
+                />{" "}
+              </div>
             </div>
           </div>
 
