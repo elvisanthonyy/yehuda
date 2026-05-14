@@ -4,13 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
 
-interface ChildProps {
-  scrollToHome: () => void;
-  scrollToAbout: () => void;
-  scrollToBeats: () => void;
-}
-
-const Footer = ({ scrollToHome, scrollToAbout, scrollToBeats }: ChildProps) => {
+const Footer = () => {
   return (
     <footer className="flex px-[32px] relative left-[50%] mb-[64px] -translate-x-[50%] flex-col items-center justify-center text-white/90 bg-secondary-2 rounded-[32px] w-fit h-[53px]">
       <div className="text-xl items-center text-primary-2 justify-between flex h-10">

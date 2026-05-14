@@ -70,7 +70,7 @@ const Main = () => {
     projectRef.current?.scrollIntoView({ behavior: "smooth" });
   };*/
 
-  const handleScrollToContactMe = () => {
+  const handleScrollToSocials = () => {
     contactMeRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -82,8 +82,12 @@ const Main = () => {
     aboutRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleScrollToBeats = () => {
-    projectRef.current?.scrollIntoView({ behavior: "smooth" });
+  const handleScrollToAfroBeats = () => {
+    item3.ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleScrollToAfroFusion = () => {
+    item4.ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -115,7 +119,12 @@ const Main = () => {
 
   return (
     <>
-      <Nav handleScrollToContactMe={handleScrollToContactMe} />
+      <Nav
+        handleScrollToSocials={handleScrollToSocials}
+        scrollToHome={handleScrollToTop}
+        scrollToAfroFusion={handleScrollToAfroFusion}
+        scrollToAfroBeats={handleScrollToAfroBeats}
+      />
       {isMusicPlayerOpen && (
         <MusicPlayer setIsMusiPlayerOpen={setIsMusicPlayerOpen} beat={beat} />
       )}
@@ -136,7 +145,7 @@ const Main = () => {
       >
         <section
           ref={aboutRef}
-          className="flex w-full sm:w-full md:mt-10 md:w-[60%] info-animation mt-[130px] flex-col shrink-0 min-h-[50dvh] xl:justify-between lg:items-start "
+          className="flex w-full sm:w-full md:mt-10 md:w-[60%] info-animation mt-[122px] flex-col shrink-0 min-h-[50dvh] xl:justify-between lg:items-start "
         >
           <div className="flex justify-center items-center relative w-full rounded-xl text-white bg-linear-to-tr  border-black">
             <div className="flex pt-[48px] justify-center md:pt-13 pt-4.5 overflow-hidden items-center relative w-full md:h-70 h-auto bg-gold-1 aspect-square border-3 border-primary-5 rounded-full text-white ">
@@ -346,11 +355,9 @@ const Main = () => {
           <FaAngleUp />
         </div>
       </main>
-      <Footer
-        scrollToHome={handleScrollToTop}
-        scrollToAbout={handleScrollToAbout}
-        scrollToBeats={handleScrollToBeats}
-      />
+      <div ref={contactMeRef}>
+        <Footer />
+      </div>
     </>
   );
 };
