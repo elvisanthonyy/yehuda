@@ -148,7 +148,7 @@ const Main = () => {
           className="flex md:items-center relative w-full md:flex-row sm:w-full info-animation mt-[122px] md:mt-[156px] flex-col shrink-0 min-h-[50dvh] xl:justify-between"
         >
           <div className="flex md:order-2 md:top-0 md:right-0 md:ml-auto justify-center items-center shrink-0 relative w-full md:w-[50%] lg:w-[45%] xl:w-[45%] rounded-xl text-white bg-linear-to-tr  border-black">
-            <div className="flex pt-[48px] justify-center md:pt-13 pt-4.5 overflow-hidden items-center relative w-full h-auto bg-gold-1 aspect-square border-3 border-primary-5 rounded-full text-white ">
+            <div className="flex pt-[48px] justify-center md:pt-13 pt-4.5 overflow-hidden items-center relative w-full h-auto bg-linear-to-b from-gold-2 to-gold-1 aspect-square border-3 border-secondary-5 rounded-full text-white ">
               <Image
                 src={"/yehuda.png"}
                 height={1000}
@@ -163,8 +163,8 @@ const Main = () => {
             <div className="px-[16px]">
               <div className="text-[32px] md:text-[40px] xl:text-[54px] w-[70%] md:w-full text-secondary-2 font-semibold">
                 Hi There, I'm <br />
-                <span className="text-gold-1 text-[36px] md:text-[42px] xl:text-[60px]">
-                  Yehuda
+                <span className="text-gold-1 text-[36px] md:text-[42px] xl:text-[58px]">
+                  BeatsByYehuda
                 </span>
               </div>
               <div className="w-full md:text-[20px] xl:text-[24px] border-b-2 border-t-2 py-[8px] md:py-[4px] mt-[16px] text-center border-gold-2 ">
@@ -199,7 +199,12 @@ const Main = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-[24px] md:mt-[16px] tansition-all ease-in duration-500 md:w-[300px] xl:w-[444px] hover:text-secondary-2 cursor-pointer hover:bg-white/0 hover:border-1 hover:border-secondary-2 text-[20px] md:text-[20px] xl:text-[24px] h-[72px] w-full bg-secondary-2 flex items-center justify-center text-primary-2 font-semibold rounded-[64px]">
+
+            <Link
+              href="https://wa.me/09023390682"
+              target="_blank"
+              className="mt-[24px] md:mt-[16px] tansition-all ease-in duration-500 md:w-[300px] xl:w-[444px] hover:text-secondary-2 cursor-pointer hover:bg-white/0 hover:border-1 hover:border-secondary-2 text-[20px] md:text-[20px] xl:text-[24px] h-[72px] w-full bg-secondary-2 flex items-center justify-center text-primary-2 font-semibold rounded-[64px]"
+            >
               <div className="mr-[16px] tansition-all ease-in duration-500 ">
                 Contact Me
               </div>
@@ -212,7 +217,7 @@ const Main = () => {
                   className="h-full"
                 />{" "}
               </div>
-            </div>
+            </Link>
           </div>
         </section>
 
@@ -244,7 +249,9 @@ const Main = () => {
             <div className="text-2xl md:w-[65%] bg-linear-to-b from-primary-1 to-primary-3 flex flex-col items-center justify-center relative overflow-hidden border md:h-[240px] lg:h-[300px] border-primary-5 sm:overflow-hidden sm:h- md:h-[80%] 2xl w-full h-[246px] text-white h-[246px] rounded-[4px]">
               <div className="absolute h-[102px] md:h-[200px] md:-left-[52px] md:-bottom-20 md:w-[200px] -bottom-10 -left-10 w-[118px] bg-gold-4 rounded-[120%]"></div>
               <div className="absolute h-[102px] -top-10 -right-10 w-[118px] md:hidden bg-secondary-2 rounded-[120%]"></div>
-              <div className="mb-[64px] md:mb-0">Afro Beats</div>
+              <div className="mb-[64px] md:mb-0">
+                Afro <span className="text-secondary-5">Beats</span>
+              </div>
             </div>
             <div className="flex overflow-hidden items-center overflow-hidden justify-center top-[28px] md:top-0 md:bg-primary-1 rounded-[8px] md:border-1 md:border-primary-5 h-full absolute md:w-[33%] md:right-0">
               <div className="absolute hidden md:flex h-[102px] md:h-[200px] -right-[52px] md:-top-20 md:w-[200px] w-[118px] bg-secondary-2 rounded-[120%]"></div>
@@ -296,7 +303,9 @@ const Main = () => {
             <div className="text-2xl md:w-[65%] bg-linear-to-b from-primary-1 to-primary-3 flex flex-col items-center justify-center relative overflow-hidden border  md:h-[240px] lg:h-[300px] border-primary-5 sm:overflow-hidden sm:h- md:h-[80%] 2xl w-full h-[246px] text-white h-[246px] rounded-[4px]">
               <div className="absolute h-[102px] md:h-[200px] md:w-[200px] -bottom-10 md:-bottom-20 -right-10 w-[118px] bg-gold-4 rounded-[120%]"></div>
               <div className="absolute h-[102px] -left-10 -top-10 md:-top-10 md:-right-10 w-[118px] md:hidden bg-secondary-2 rounded-[120%]"></div>
-              <div className="mb-[64px] md:mb-0">Afro Fusion</div>
+              <div className="mb-[64px] md:mb-0">
+                Afro <span className="text-secondary-5">Fusion</span>
+              </div>
             </div>
             <div className="flex overflow-hidden items-center justify-center top-[28px] md:top-0 md:bg-primary-1 rounded-[8px] md:border-1 md:border-primary-5 h-full absolute md:w-[33%] md:left-0">
               <div className="absolute hidden md:flex h-[102px] md:h-[200px] -left-[52px] -top-20 md:w-[200px] w-[118px] bg-secondary-2 rounded-[120%]"></div>
