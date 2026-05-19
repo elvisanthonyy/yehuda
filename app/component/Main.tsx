@@ -141,13 +141,13 @@ const Main = () => {
       </div>
       <main
         ref={topRef}
-        className="flex flex-col items-center relative min-h-screen h-fit px-[16px] md:px-[168px]"
+        className="flex flex-col sm:px-[32px] items-center relative min-h-screen h-fit px-[16px] xl:px-[168px] md:px-[64px]"
       >
         <section
           ref={aboutRef}
-          className="flex relative w-full md:flex-row sm:w-full info-animation mt-[122px] md:mt-[156px] flex-col shrink-0 min-h-[50dvh] xl:justify-between lg:items-center "
+          className="flex md:items-center relative w-full md:flex-row sm:w-full info-animation mt-[122px] md:mt-[156px] flex-col shrink-0 min-h-[50dvh] xl:justify-between"
         >
-          <div className="flex md:order-2 md:top-0 md:right-0 justify-center items-center relative w-full md:w-[45%] rounded-xl text-white bg-linear-to-tr  border-black">
+          <div className="flex md:order-2 md:top-0 md:right-0 md:ml-auto justify-center items-center shrink-0 relative w-full md:w-[50%] lg:w-[45%] xl:w-[45%] rounded-xl text-white bg-linear-to-tr  border-black">
             <div className="flex pt-[48px] justify-center md:pt-13 pt-4.5 overflow-hidden items-center relative w-full h-auto bg-gold-1 aspect-square border-3 border-primary-5 rounded-full text-white ">
               <Image
                 src={"/yehuda.png"}
@@ -161,16 +161,16 @@ const Main = () => {
           </div>
           <div className="mt-[40px] md:order-1 flex flex-col w-full md:w-[45%]">
             <div className="px-[16px]">
-              <div className="text-[32px] md:text-[60px] w-[70%] md:w-full text-secondary-2 font-semibold">
+              <div className="text-[32px] md:text-[40px] xl:text-[54px] w-[70%] md:w-full text-secondary-2 font-semibold">
                 Hi There, I'm <br />
-                <span className="text-gold-1 text-[36px] md:text-[60px]">
+                <span className="text-gold-1 text-[36px] md:text-[42px] xl:text-[60px]">
                   Yehuda
                 </span>
               </div>
-              <div className="w-full md:text-[24px] border-b-2 border-t-2 py-[8px] mt-[16px] text-center border-gold-2 ">
+              <div className="w-full md:text-[20px] xl:text-[24px] border-b-2 border-t-2 py-[8px] md:py-[4px] mt-[16px] text-center border-gold-2 ">
                 I'm a Music Producer
               </div>
-              <div className="flex h-[32px] mt-[16px] items-center">
+              <div className="flex h-[32px] mt-[16px]  items-center">
                 <div className="h-[23px] w-[18px] mr-[16px]">
                   <Image
                     src={"/icons/location.svg"}
@@ -180,11 +180,11 @@ const Main = () => {
                     className="h-full"
                   />{" "}
                 </div>
-                <div className=" text-[16px] text-secondary-3">
+                <div className="text-[16px] text-secondary-3">
                   Kaduna, Nigeria.
                 </div>
               </div>
-              <div className="flex h-[32px] mt-[16px] items-center">
+              <div className="flex h-[32px] mt-[16px] md:mt-[8px] xl:mt-[16px] items-center">
                 <div className="h-[23px] w-[18px] mr-[16px]">
                   <Image
                     src={"/icons/email.svg"}
@@ -199,7 +199,7 @@ const Main = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-[24px] tansition-all ease-in duration-500 md:w-[444px] hover:text-secondary-2 cursor-pointer hover:bg-white/0 hover:border-1 hover:border-secondary-2 text-[20px] md:text-[24px] h-[72px] w-full bg-secondary-2 flex items-center justify-center text-primary-2 font-semibold rounded-[64px]">
+            <div className="mt-[24px] md:mt-[16px] tansition-all ease-in duration-500 md:w-[300px] xl:w-[444px] hover:text-secondary-2 cursor-pointer hover:bg-white/0 hover:border-1 hover:border-secondary-2 text-[20px] md:text-[20px] xl:text-[24px] h-[72px] w-full bg-secondary-2 flex items-center justify-center text-primary-2 font-semibold rounded-[64px]">
               <div className="mr-[16px] tansition-all ease-in duration-500 ">
                 Contact Me
               </div>
@@ -218,7 +218,7 @@ const Main = () => {
 
         <div
           ref={projectRef}
-          className="flex flex-row items-center justify-between md:mt-[68px] w-full md:px-[32px] font-semibold border-black/30 text-yehuda-black px-[4px] py-[8px] w-[92%] border-t-2 border-primary-5 md:border-t-0 md:border-l-[3px] md:border-r-[3px] md:mt-5 h-[52px] flex-col my-5 mt-[36px]"
+          className="flex flex-row items-center justify-between md:mt-[68px] w-full md:px-[32px] font-semibold border-black/30 text-yehuda-black px-[4px] py-[8px] md:px-[4px] w-[92%] border-t-2 border-primary-5 md:border-t-0 md:border-l-[3px] md:border-r-[3px] h-[52px] md:h-[48px] flex-col mt-[36px]"
         >
           <div className="text-[20px] text-secondary-1">Genres I Produce</div>
           <div>
@@ -234,16 +234,21 @@ const Main = () => {
           </div>
         </div>
 
-        <div className={`transition-all w-full duration-700 ease-in`}>
+        <div
+          className={`transition-all w-full mt-[24px] md:mt-[40px] duration-700 ease-in`}
+        >
           <div
             ref={item3.ref}
-            className={`w-full transition-all duration-700 ease-in ${item3.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center mb-5`}
+            className={`w-full relative transition-all duration-700 ease-in ${item3.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center md:justify-start justify-center mb-5`}
           >
-            <div className="text-2xl bg-gradient-to-b from-primary-1 to-primary-3 flex flex-col items-center justify-center relative overflow-hidden border-1 border-primary-5 sm:overflow-hidden sm:h-[70%] md:h-[80%] 2xl w-full h-[246px] text-white h-[246px] rounded-[4px]">
-              <div className="absolute h-[102px] -bottom-10 -left-10 w-[118px] bg-gold-4 rounded-[120%]"></div>
-              <div className="absolute h-[102px] -top-10 -right-10 w-[118px] bg-secondary-4 rounded-[120%]"></div>
-              <div>Afro Beats</div>
-              <div className="h-[70px] w-[70px] mt-[16px]">
+            <div className="text-2xl md:w-[65%] bg-linear-to-b from-primary-1 to-primary-3 flex flex-col items-center justify-center relative overflow-hidden border md:h-[240px] lg:h-[300px] border-primary-5 sm:overflow-hidden sm:h- md:h-[80%] 2xl w-full h-[246px] text-white h-[246px] rounded-[4px]">
+              <div className="absolute h-[102px] md:h-[200px] md:-left-[52px] md:-bottom-20 md:w-[200px] -bottom-10 -left-10 w-[118px] bg-gold-4 rounded-[120%]"></div>
+              <div className="absolute h-[102px] -top-10 -right-10 w-[118px] md:hidden bg-secondary-2 rounded-[120%]"></div>
+              <div className="mb-[64px] md:mb-0">Afro Beats</div>
+            </div>
+            <div className="flex overflow-hidden items-center overflow-hidden justify-center top-[28px] md:top-0 md:bg-primary-1 rounded-[8px] md:border-1 md:border-primary-5 h-full absolute md:w-[33%] md:right-0">
+              <div className="absolute hidden md:flex h-[102px] md:h-[200px] -right-[52px] md:-top-20 md:w-[200px] w-[118px] bg-secondary-2 rounded-[120%]"></div>
+              <div className="h-[70px] md:w-[88px] md:h-[88px] w-[70px] mt-[16px]">
                 <Image
                   src={"/icons/drums.svg"}
                   height={100}
@@ -255,12 +260,12 @@ const Main = () => {
             </div>
           </div>
 
-          <div ref={item5.ref} className="w-full h-auto">
+          <div ref={item5.ref} className="w-full h-fit mt-[16px] md:mt-[24px]">
             {beatsLoading ? (
               <BeatsLoading />
             ) : (
               <div
-                className={`w-full h-[222px] border-b-2 border-primary-5 overflow-x-auto overflow-y-hidden no-scrollbar flex transition-all ${item5.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
+                className={`w-full h-fit border-b-2 border-primary-5 overflow-x-auto overflow-y-hidden no-scrollbar flex transition-all ${item5.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
               >
                 {beats
                   .filter((beat) => beat.category === "afrobeats")
@@ -271,7 +276,7 @@ const Main = () => {
                         setIsMusicPlayerOpen(true);
                       }}
                       key={beat._id?.toString()}
-                      className="flex shrink-0 md:w-70 md:h-70 w-[170px] h-[198px] mr-[8px]"
+                      className="flex shrink-0 md:w-[300px] md:h-[340px] w-[170px] h-[198px] mr-[8px]"
                     >
                       <Beats
                         beat={beat}
@@ -286,13 +291,16 @@ const Main = () => {
 
           <div
             ref={item4.ref}
-            className={`w-full transition-all duration-700 ease-in ${item4.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center justify-center mt-[32px]`}
+            className={`w-full relative transition-all duration-700 ease-in ${item4.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center md:justify-end mt-[24px] md:mt-[40px] justify-center`}
           >
-            <div className="text-2xl bg-gradient-to-b from-primary-1 to-primary-3 flex flex-col items-center justify-center relative overflow-hidden border-1 border-primary-5 sm:overflow-hidden sm:h-[70%] md:h-[80%] 2xl w-full h-[246px] text-white h-[246px] rounded-[4px]">
-              <div className="absolute h-[102px] -top-10 -left-10 w-[118px] bg-gold-4 rounded-[120%]"></div>
-              <div className="absolute h-[102px] -bottom-10 -right-10 w-[118px] bg-secondary-4 rounded-[120%]"></div>
-              <div>Afro Fusion</div>
-              <div className="h-[70px] w-[70px] mt-[16px]">
+            <div className="text-2xl md:w-[65%] bg-linear-to-b from-primary-1 to-primary-3 flex flex-col items-center justify-center relative overflow-hidden border  md:h-[240px] lg:h-[300px] border-primary-5 sm:overflow-hidden sm:h- md:h-[80%] 2xl w-full h-[246px] text-white h-[246px] rounded-[4px]">
+              <div className="absolute h-[102px] md:h-[200px] md:w-[200px] -bottom-10 md:-bottom-20 -right-10 w-[118px] bg-gold-4 rounded-[120%]"></div>
+              <div className="absolute h-[102px] -left-10 -top-10 md:-top-10 md:-right-10 w-[118px] md:hidden bg-secondary-2 rounded-[120%]"></div>
+              <div className="mb-[64px] md:mb-0">Afro Fusion</div>
+            </div>
+            <div className="flex overflow-hidden items-center justify-center top-[28px] md:top-0 md:bg-primary-1 rounded-[8px] md:border-1 md:border-primary-5 h-full absolute md:w-[33%] md:left-0">
+              <div className="absolute hidden md:flex h-[102px] md:h-[200px] -left-[52px] -top-20 md:w-[200px] w-[118px] bg-secondary-2 rounded-[120%]"></div>
+              <div className="h-[64px] md:w-[80px] md:h-[80px] w-[64px] mt-[16px]">
                 <Image
                   src={"/icons/piano.svg"}
                   height={100}
@@ -309,7 +317,7 @@ const Main = () => {
               <BeatsLoading />
             ) : (
               <div
-                className={`w-full h-[222px] border-b-2 border-primary-5 md:h-90 overflow-y-auto no-scrollbar flex h-60 transition-all ${item6.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
+                className={`w-full h-[222px] border-b-2 border-primary-5 md:h-fit overflow-y-hidden no-scrollbar flex h-60 transition-all ${item6.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
               >
                 {beats
                   .filter((beat) => beat.category === "afrofusion")
@@ -320,7 +328,7 @@ const Main = () => {
                         setIsMusicPlayerOpen(true);
                       }}
                       key={beat._id?.toString()}
-                      className="flex shrink-0 md:w-70 md:h-70 w-[170px] h-[198px] mr-[8px] mr-2"
+                      className="flex shrink-0 md:w-[300px] md:h-[340px] w-[170px] h-[198px] mr-[8px]"
                     >
                       <Beats
                         beat={beat}
@@ -334,8 +342,8 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="bg-primary-1 mt-[32px] border-1 border-primary-5 md:w-[60%] mb-[90px] sm:w-[80%] w-full flex flex-col justify-center items-center rounded-lg h-60">
-          <div className="font-semibold text-lg">Follow me on Youtube</div>
+        <div className="bg-primary-1 mt-[24px] md:mt-[40px] border-1 border-primary-5 md:w-fit px-[32px] mb-[90px] w-full flex flex-col justify-center items-center rounded-lg h-60">
+          <div className="font-semibold text-[18px]">Follow me on Youtube</div>
 
           <Link
             href={
@@ -344,9 +352,9 @@ const Main = () => {
             target="_blank"
             className="w-[85%]  sm:w-60 md:w-70"
           >
-            <div className="w-fullcursor-pointer text-white flex justify-center items-center h-13 bg-red-600 mt-5 rounded-xl">
-              <FaYoutube className="text-2xl mr-3" />
-              <div className=""> BeatsByYehuda</div>
+            <div className="w-fullcursor-pointer text-white flex justify-center items-center h-13 bg-red-600 mt-[16px] rounded-[32px]">
+              <FaYoutube className="text-2xl mr-[12px]" />
+              <div className="text-[16x]"> BeatsByYehuda</div>
             </div>
           </Link>
         </div>

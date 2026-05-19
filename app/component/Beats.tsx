@@ -15,8 +15,8 @@ const Beats = ({ beat, setBeat, setIsMusicPlayerOpen }: ChildProps) => {
     setIsMusicPlayerOpen(true);
   };
   return (
-    <div className="w-full h-full">
-      <div className="w-full h-auto aspect-square relative rounded-sm overflow-hidden">
+    <div className="w-full h-full flex flex-col">
+      <div className="h-full aspect-square relative rounded-sm overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full mx-auto rounded-lg">
           {beat.imageUrl && (
             <Image
@@ -44,7 +44,7 @@ const Beats = ({ beat, setBeat, setIsMusicPlayerOpen }: ChildProps) => {
           </div>
         </div>
       </div>
-      <div className="w-full md:text-sm text-secondary-2 text-[16px] overflow-hidden h-10 whitespace-nowrap text-ellipsis border-yehuda-black/30 flex flex-nowrap items-end z-40">
+      <div className="md:text-[18px] mt-[8px] md:mt-[16px] mb-[8px] w-[90%] text-secondary-2 text-[16px] overflow-hidden h-[30px] whitespace-nowrap text-ellipsis border-yehuda-black/30 flex flex-nowrap items-end z-40">
         {beat.name}
       </div>
     </div>
