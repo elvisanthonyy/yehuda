@@ -129,15 +129,15 @@ const Main = () => {
         <MusicPlayer setIsMusiPlayerOpen={setIsMusicPlayerOpen} beat={beat} />
       )}
       <div className="w-full h-full absolute overflow-hidden">
-        <div className="border-t-1 w-[200%] relative top-30 mb-25 border-gold-1/50 rotate-33"></div>
-        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60  border-secondary-2/40 rotate-33"></div>
-        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60 border-secondary-2/40 rotate-33"></div>
-        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60 border-secondary-2/40 rotate-33"></div>
-        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60 border-gold-1/40 rotate-33"></div>
-        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60 h-40 border-secondary-2/40 rotate-33"></div>
-        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60 border-secondary-2/40 rotate-33"></div>
-        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60 border-gold-1/40 rotate-33"></div>
-        <div className="border-t-1 w-[200%] relative -left-35 top-25 mb-60 h-40 border-secondary-2/40 rotate-33"></div>
+        <div className="border-t w-[200%] relative top-30 mb-25 border-gold-1/50 rotate-33"></div>
+        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120  border-secondary-2/40 rotate-33"></div>
+        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 border-secondary-2/40 rotate-33"></div>
+        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 border-secondary-2/40 rotate-33"></div>
+        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 border-gold-1/40 rotate-33"></div>
+        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 h-40 border-secondary-2/40 rotate-33"></div>
+        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 border-secondary-2/40 rotate-33"></div>
+        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 border-gold-1/40 rotate-33"></div>
+        <div className="border-t  w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 h-40 border-secondary-2/40 rotate-33"></div>
       </div>
       <main
         ref={topRef}
