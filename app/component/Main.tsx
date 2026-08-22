@@ -129,49 +129,49 @@ const Main = () => {
         <MusicPlayer setIsMusiPlayerOpen={setIsMusicPlayerOpen} beat={beat} />
       )}
       <div className="w-full h-full absolute overflow-hidden">
-        <div className="border-t w-[200%] relative top-30 mb-25 border-gold-1/50 rotate-33"></div>
-        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120  border-secondary-2/40 rotate-33"></div>
-        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 border-secondary-2/40 rotate-33"></div>
-        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 border-secondary-2/40 rotate-33"></div>
-        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 border-gold-1/40 rotate-33"></div>
-        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 h-40 border-secondary-2/40 rotate-33"></div>
-        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 border-secondary-2/40 rotate-33"></div>
-        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 border-gold-1/40 rotate-33"></div>
-        <div className="border-t  w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 h-40 border-secondary-2/40 rotate-33"></div>
+        <div className="border-t w-[200%] relative top-30 mb-25 border-gold-1/20 rotate-33"></div>
+        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120  border-secondary-2/20 rotate-33"></div>
+        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 border-secondary-2/20 rotate-33"></div>
+        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 border-secondary-2/20 rotate-33"></div>
+        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 border-gold-1/20 rotate-33"></div>
+        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 h-40 border-secondary-2/20 rotate-33"></div>
+        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 border-secondary-2/20 rotate-33"></div>
+        <div className="border-t w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 border-gold-1/20 rotate-33"></div>
+        <div className="border-t  w-[200%] relative -left-35 md:-left-70 top-25 mb-60 md:mb-120 h-40 border-secondary-2/20 rotate-33"></div>
       </div>
       <main
         ref={topRef}
-        className="flex flex-col sm:px-[32px] items-center relative min-h-screen h-fit px-[16px] xl:px-[168px] md:px-[64px]"
+        className="flex flex-col sm:px-[24px] items-center relative min-h-screen h-fit px-[16px] xl:px-[168px] md:px-[64px]"
       >
         <section
           ref={aboutRef}
-          className="flex md:items-center relative w-full md:flex-row sm:w-full info-animation mt-[122px] md:mt-[156px] flex-col shrink-0 min-h-[50dvh] xl:justify-between"
+          className="flex bg-[#262626] px-4 py-4 rounded-[28px] md:items-center relative w-full md:flex-row sm:w-full info-animation mt-[88px] md:mt-[64px] flex-col shrink-0 min-h-[50dvh] xl:justify-between"
         >
           <div className="flex md:order-2 md:top-0 md:right-0 md:ml-auto justify-center items-center shrink-0 relative w-full md:w-[50%] lg:w-[45%] xl:w-[45%] rounded-xl text-white bg-linear-to-tr  border-black">
-            <div className="flex pt-[48px] justify-center md:pt-13 pt-4.5 overflow-hidden items-center relative w-full h-auto bg-linear-to-b from-gold-2 to-gold-1 aspect-square border-3 border-secondary-5 rounded-full text-white ">
+            <div className="flex aspect-[7/5] border border-secondary-2 pt-[48px] rounded-[16px] justify-center md:pt-13 pt-4.5 overflow-hidden items-center relative w-full h-auto bg-linear-to-b from-gold-1 to-gold-2">
               <Image
                 src={"/yehuda.png"}
                 height={1000}
                 width={1000}
                 draggable={false}
                 alt="afro"
-                className="h-[160%] object-cover"
+                className="h-[160%] mt-24 object-cover"
               />
             </div>
           </div>
-          <div className="mt-[40px] md:order-1 flex flex-col w-full md:w-[45%]">
-            <div className="px-[16px]">
-              <div className="text-[32px] md:text-[40px] xl:text-[54px] w-[70%] md:w-full text-secondary-2 font-semibold">
-                Hi There, I'm <br />
-                <span className="text-gold-1 text-[36px] md:text-[42px] xl:text-[58px]">
-                  BeatsByYehuda
+          <div className="mt-[32px] bg-[#262626]  rounded-[12px] md:order-1 flex flex-col w-full md:w-[45%]">
+            <div className="flex flex-col gap-3">
+              <div className="text-[24px] px-2 leading-[1.4] md:text-[40px] xl:text-[54px] w-full md:w-full text-secondary-2 font-semibold">
+                <span className="text-secondary-5">
+                  Hi There, <br />
                 </span>
+                I'm BeatsByYehuda
               </div>
-              <div className="w-full md:text-[20px] xl:text-[24px] border-b-2 border-t-2 py-[8px] md:py-[4px] mt-[16px] text-center border-gold-2 ">
-                I'm a Music Producer
+              <div className="w-full rounded-[32px] bg-[#38372E] my-1 md:text-[20px] xl:text-[24px] px-6 py-[8px] text-[14px] md:py-[4px] text-left border-primary-2 text-secondary-2">
+                A Music Producer
               </div>
-              <div className="flex h-[32px] mt-[16px]  items-center">
-                <div className="h-[23px] w-[18px] mr-[16px]">
+              <div className="flex gap-3 items-center">
+                <div className="h-[20px] aspect-[1/1]">
                   <Image
                     src={"/icons/location.svg"}
                     height={100}
@@ -180,12 +180,12 @@ const Main = () => {
                     className="h-full"
                   />{" "}
                 </div>
-                <div className="text-[16px] text-secondary-3">
+                <div className="text-[14px] text-secondary-2">
                   Kaduna, Nigeria.
                 </div>
               </div>
-              <div className="flex h-[32px] mt-[16px] md:mt-[8px] xl:mt-[16px] items-center">
-                <div className="h-[23px] w-[18px] mr-[16px]">
+              <div className="flex gap-3 items-center">
+                <div className="h-[20px] aspect-[1/1]">
                   <Image
                     src={"/icons/email.svg"}
                     height={100}
@@ -194,7 +194,7 @@ const Main = () => {
                     className="h-full"
                   />{" "}
                 </div>
-                <div className=" text-[16px] text-secondary-3">
+                <div className=" text-[14px] text-secondary-2">
                   officialyehuda@gmail.com
                 </div>
               </div>
@@ -203,12 +203,12 @@ const Main = () => {
             <Link
               href="https://wa.me/09023390682"
               target="_blank"
-              className="mt-[24px] md:mt-[16px] tansition-all ease-in duration-500 md:w-[300px] xl:w-[444px] hover:text-secondary-2 cursor-pointer hover:bg-white/0 hover:border-1 hover:border-secondary-2 text-[20px] md:text-[20px] xl:text-[24px] h-[72px] w-full bg-secondary-2 flex items-center justify-center text-primary-2 font-semibold rounded-[64px]"
+              className="mt-[32px] md:mt-[16px] gap-2 tansition-all ease-in duration-500 md:w-[300px] xl:w-[444px] hover:text-secondary-2 cursor-pointer hover:bg-white/0 hover:border-1 hover:border-secondary-2 text-[14px] md:text-[20px] xl:text-[24px] h-[54px] w-full bg-secondary-2 flex items-center justify-center text-primary-2 font-semibold rounded-[64px]"
             >
-              <div className="mr-[16px] tansition-all ease-in duration-500 ">
+              <div className="tansition-all ease-in duration-500 ">
                 Contact Me
               </div>
-              <div className="h-[28px] w-[28px] mr-[16px]">
+              <div className="h-[20px] w-[20px]">
                 <Image
                   src={"/icons/message.svg"}
                   height={100}
@@ -223,11 +223,11 @@ const Main = () => {
 
         <div
           ref={projectRef}
-          className="flex flex-row items-center justify-between md:mt-[68px] w-full md:px-[32px] font-semibold border-black/30 text-yehuda-black px-[4px] py-[8px] md:px-[4px] w-[92%] border-t-2 border-primary-5 md:border-t-0 md:border-l-[3px] md:border-r-[3px] h-[52px] md:h-[48px] flex-col mt-[36px]"
+          className="flex flex-row bg-primary-2 items-center justify-between md:mt-[68px] w-full md:px-[32px] font-semibold border-black-3 text-yehuda-black py-[8px] md:px-[4px] w-[92%] border-t border-b border-primary-5 md:border-t-0 md:border-l-[3px] md:border-r-[3px] h-[52px] md:h-[48px] flex-col mt-[44px]"
         >
-          <div className="text-[20px] text-secondary-1">Genres I Produce</div>
+          <div className="text-[16px] text-secondary-4">Genres I Produce</div>
           <div>
-            <div className="h-[36px] w-[36px] mr-[16px]">
+            <div className="h-[24px] aspect-square">
               <Image
                 src={"/icons/music.svg"}
                 height={100}
@@ -244,18 +244,18 @@ const Main = () => {
         >
           <div
             ref={item3.ref}
-            className={`w-full relative transition-all duration-700 ease-in ${item3.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center md:justify-start justify-center mb-5`}
+            className={`w-full relative transition-all duration-700 ease-in ${item3.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center md:justify-start justify-center mb-4`}
           >
-            <div className="text-2xl md:w-[65%] bg-linear-to-b from-primary-1 to-primary-3 flex flex-col items-center justify-center relative overflow-hidden border md:h-[240px] lg:h-[300px] border-primary-5 sm:overflow-hidden sm:h- md:h-[80%] 2xl w-full h-[246px] text-white h-[246px] rounded-[4px]">
-              <div className="absolute h-[102px] md:h-[200px] md:-left-[52px] md:-bottom-20 md:w-[200px] -bottom-10 -left-10 w-[118px] bg-gold-4 rounded-[120%]"></div>
-              <div className="absolute h-[102px] -top-10 -right-10 w-[118px] md:hidden bg-secondary-2 rounded-[120%]"></div>
-              <div className="mb-[64px] md:mb-0">
+            <div className="text-2xl md:w-[65%] bg-[#262626] flex flex-col items-center justify-center relative overflow-hidden border md:h-[240px] lg:h-[300px] border-primary-5 sm:overflow-hidden sm:h- md:h-[80%] 2xl w-full aspect-[8/5] text-white rounded-[12px]">
+              <div className="absolute h-[102px] blur-[120px] md:h-[200px] md:-left-[52px] md:-bottom-20 md:w-[200px] -bottom-10 -left-10 w-[118px] bg-gold-3/50 rounded-[120%]"></div>
+              <div className="absolute h-[102px] blur-[80px] -top-10 -right-10 w-[118px] md:hidden bg-secondary-2 hidden rounded-[120%]"></div>
+              <div className="mb-[16px] text-[20px] font-semibold md:mb-0">
                 Afro <span className="text-secondary-5">Beats</span>
               </div>
             </div>
             <div className="flex overflow-hidden items-center overflow-hidden justify-center top-[28px] md:top-0 md:bg-primary-1 rounded-[8px] md:border-1 md:border-primary-5 h-full absolute md:w-[33%] md:right-0">
               <div className="absolute hidden md:flex h-[102px] md:h-[200px] -right-[52px] md:-top-20 md:w-[200px] w-[118px] bg-secondary-2 rounded-[120%]"></div>
-              <div className="h-[70px] md:w-[88px] md:h-[88px] w-[70px] mt-[16px]">
+              <div className="h-[40px] md:w-[88px] md:h-[88px] w-[70px] mt-[16px]">
                 <Image
                   src={"/icons/drums.svg"}
                   height={100}
@@ -272,10 +272,10 @@ const Main = () => {
               <BeatsLoading />
             ) : (
               <div
-                className={`w-full h-fit border-b-2 border-primary-5 overflow-x-auto overflow-y-hidden no-scrollbar flex transition-all ${item5.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
+                className={`w-full h-fit border-b border-primary-4 overflow-x-auto overflow-y-hidden no-scrollbar flex transition-all ${item5.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
               >
                 {beats
-                  .filter((beat) => beat.category === "afrobeats")
+                  ?.filter((beat) => beat.category === "afrobeats")
                   .map((beat: IBeat) => (
                     <div
                       onClick={() => {
@@ -300,16 +300,16 @@ const Main = () => {
             ref={item4.ref}
             className={`w-full relative transition-all duration-700 ease-in ${item4.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center md:justify-end mt-[24px] md:mt-[40px] justify-center`}
           >
-            <div className="text-2xl md:w-[65%] bg-linear-to-b from-primary-1 to-primary-3 flex flex-col items-center justify-center relative overflow-hidden border  md:h-[240px] lg:h-[300px] border-primary-5 sm:overflow-hidden sm:h- md:h-[80%] 2xl w-full h-[246px] text-white h-[246px] rounded-[4px]">
-              <div className="absolute h-[102px] md:h-[200px] md:w-[200px] -bottom-10 md:-bottom-20 -right-10 w-[118px] bg-gold-4 rounded-[120%]"></div>
-              <div className="absolute h-[102px] -left-10 -top-10 md:-top-10 md:-right-10 w-[118px] md:hidden bg-secondary-2 rounded-[120%]"></div>
-              <div className="mb-[64px] md:mb-0">
+            <div className="text-2xl md:w-[65%] bg-[#262626] flex flex-col items-center justify-center relative overflow-hidden border  md:h-[240px] lg:h-[300px] border-primary-5 sm:overflow-hidden md:h-[80%] 2xl w-full aspect-[8/5] text-white rounded-[12px]">
+              <div className="absolute h-[102px] blur-[120px] md:h-[200px] md:w-[200px] -bottom-10 md:-bottom-20 -right-10 w-[118px] bg-gold-2/50 rounded-[120%]"></div>
+              <div className="absolute h-[102px] hidden blur-[80px] -left-10 -top-10 md:-top-10 md:-right-10 w-[118px] md:hidden bg-secondary-2 rounded-[120%]"></div>
+              <div className="mb-[32px] text-[20px] font-semibold md:mb-0">
                 Afro <span className="text-secondary-5">Fusion</span>
               </div>
             </div>
             <div className="flex overflow-hidden items-center justify-center top-[28px] md:top-0 md:bg-primary-1 rounded-[8px] md:border-1 md:border-primary-5 h-full absolute md:w-[33%] md:left-0">
               <div className="absolute hidden md:flex h-[102px] md:h-[200px] -left-[52px] -top-20 md:w-[200px] w-[118px] bg-secondary-2 rounded-[120%]"></div>
-              <div className="h-[64px] md:w-[80px] md:h-[80px] w-[64px] mt-[16px]">
+              <div className="h-[40px] md:w-[80px] md:h-[80px] w-[64px] mt-[16px]">
                 <Image
                   src={"/icons/piano.svg"}
                   height={100}
@@ -326,10 +326,10 @@ const Main = () => {
               <BeatsLoading />
             ) : (
               <div
-                className={`w-full h-[222px] border-b-2 border-primary-5 md:h-fit overflow-y-hidden no-scrollbar flex h-60 transition-all ${item6.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
+                className={`w-full border-b border-primary-4 md:h-fit overflow-y-hidden no-scrollbar flex transition-all ${item6.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} duration-700 ease-in`}
               >
                 {beats
-                  .filter((beat) => beat.category === "afrofusion")
+                  ?.filter((beat) => beat.category === "afrofusion")
                   .map((beat: IBeat) => (
                     <div
                       onClick={() => {
@@ -351,8 +351,8 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="bg-primary-1 mt-[24px] md:mt-[40px] border-1 border-primary-5 md:w-fit px-[32px] mb-[90px] w-full flex flex-col justify-center items-center rounded-lg h-60">
-          <div className="font-semibold text-[18px]">Follow me on Youtube</div>
+        <div className="bg-primary-1 mt-[24px] md:mt-[40px] border-1 border-primary-4 md:w-fit px-[32px] mb-[64px] w-full flex flex-col justify-center items-center rounded-[12px] h-fit py-8">
+          <div className="font-semibold text-[16px]">Follow me on Youtube</div>
 
           <Link
             href={
@@ -361,9 +361,9 @@ const Main = () => {
             target="_blank"
             className="w-[85%]  sm:w-60 md:w-70"
           >
-            <div className="w-fullcursor-pointer text-white flex justify-center items-center h-13 bg-red-600 mt-[16px] rounded-[32px]">
-              <FaYoutube className="text-2xl mr-[12px]" />
-              <div className="text-[16x]"> BeatsByYehuda</div>
+            <div className="w-full gap-2 cursor-pointer text-white flex justify-center items-center h-13 bg-red-600 mt-[16px] rounded-[32px]">
+              <FaYoutube className="text-[20px]" />
+              <div className="text-[16x] text-secondary-2"> BeatsByYehuda</div>
             </div>
           </Link>
         </div>

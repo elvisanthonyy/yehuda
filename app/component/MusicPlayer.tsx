@@ -85,55 +85,56 @@ const MusicPlayer = ({ beat, setIsMusiPlayerOpen }: ChildProps) => {
   return (
     <div
       onClick={() => setIsMusiPlayerOpen(false)}
-      className="flex items-center justify-center z-71 fixed top-0 left-0 md:bg-white/5 md:h-full w-full h-full bg-white/10 backdrop-blur-lg"
+      className="flex items-center justify-center z-71 fixed top-0 left-0 md:bg-white/5 md:h-full w-full h-full bg-black/5 backdrop-blur-lg"
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="w-full bottom-0 md:top-[50%] md:-translate-y-[50%] absolute  md:rounded-2xl shadow-[0_-6px_20px_rgba(0,0,0,0.15)] bg-primary-1 border-secondary-5 md:border md:border-white/0 py-3 h-[230px] md:w-110 md:h-80 overflow-hidden"
+        className="w-full bottom-0 md:top-[50%] flex flex-col justify-center h-[232px] md:-translate-y-[50%] absolute  md:rounded-2xl shadow-[0_-6px_20px_rgba(0,0,0,0.15)] bg-primary-2 border-t border-primary-4 md:border md:border-white/0 py-6 px-6 h-[100px] md:w-110 md:h-80 overflow-hidden"
       >
         <div className="z-10 backdrop-blur-lg bg-white/0 w-full h-full absolute top-0 left-0"></div>
 
-        <div className="z-40 flex items-center flex-col py-5 absolute top-[50%] left-[50%] -translate-[50%] w-[90%] flex mx-auto">
+        <div className="z-40 px-6 flex justify-center  items-center flex-col absolute top-[50%] left-[50%] -translate-[50%] w-full h-fit flex mx-auto">
           {beat && (
             <audio ref={audioRef} src={beat.audioUrl} preload="metadata" />
           )}
 
-          <div className="w-full flex flex-col items-center z-40 mt-3">
-            <div className="mb-5 flex items-center mt-4 text-center w-full text-[18px] text-secondary-3">
-              <div className="mr-[8px] w-[85%] overflow-hidden text-nowrap">
-                {beat?.name}
+          <div className="w-full gap-4 flex flex-col justify-center items-center z-40">
+            <div className="flex  items-center mt-4 text-center w-full text-[18px] text-secondary-3">
+              <div
+                className="flex justify-center text-xl items-center mx-auto rounded-full h-[56px] w-[56px] border-2 border-secondary-5 cursor-pointer text-white-primary-3"
+                onClick={toggleAudio}
+              >
+                {isPlaying ? <FaPause /> : <FaPlay />}
               </div>
-
               <div
                 onClick={() => setIsMusiPlayerOpen(false)}
-                className="text-white absolute right-1 mt-1 cursor-pointer"
+                className="text-white absolute right-6 cursor-pointer"
               >
-                <FaTimes className="text-xl" />
+                <span className="h-[2px] block w-5 bg-primary-5 rotate-45"></span>
+                <span className="h-[2px] block -translate-y-0.5 w-5 bg-primary-5 -rotate-45"></span>
               </div>
             </div>
-            <input
-              value={currentTime}
-              min={0}
-              max={duration}
-              onChange={handleSeek}
-              className="w-full mt-[16px] bg-white/40 mb-[4px] accent-white appearance-none  h-[3px]"
-              type="range"
-            />
+            <div className="flex flex-col gap-0.5 w-full">
+              <input
+                value={currentTime}
+                min={0}
+                max={duration}
+                onChange={handleSeek}
+                className="w-full mt-[16px] mb-2 bg-white/40 accent-white appearance-none h-[2px]"
+                type="range"
+              />
 
-            <div className="flex w-full mt-[4px] justify-between">
-              <span className="text-[14px] text-white">
-                {formatTime(currentTime)}
-              </span>
-              <span className="text-[14px] text-white">
-                {formatTime(duration)}
-              </span>
+              <div className="flex w-full justify-between">
+                <span className="text-[14px] text-primary-5">
+                  {formatTime(currentTime)}
+                </span>
+                <span className="text-[14px] text-primary-5">
+                  {formatTime(duration)}
+                </span>
+              </div>
             </div>
-
-            <div
-              className="flex justify-center text-xl mt-[16px] mb-8 items-center mx-auto rounded-full h-[56px] w-[56px] border-2 border-secondary-4 cursor-pointer text-white"
-              onClick={toggleAudio}
-            >
-              {isPlaying ? <FaPause /> : <FaPlay />}
+            <div className="text-[14px] text-center w-full overflow-hidden text-nowrap">
+              {beat?.name}
             </div>
           </div>
         </div>

@@ -17,12 +17,12 @@ const Nav = ({
 }: ChildProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <nav className="flex border-b-1 border-primary-5 md:px-[64px] xl:px-[168px] nav-animation bg-primary-1 text-xl justify-between items-center z-10 px-[32px] absolute top-0 left-0 w-full h-[72px] md:h-[88px]">
-      <div className="flex items-center">
-        <div className="cursor-pointer mr-[20px] flex justify-center font-bold items-center text-[20px] w-11 h-11 text-primary-1 flex justify-center items-center rounded-full bg-secondary-2">
+    <nav className="flex fixed border-primary-4 md:px-[64px] xl:px-[168px] nav-animation bg-primary-2 text-xl justify-between items-center z-10 px-[20px] absolute top-0 left-0 w-full h-[76px] md:h-[72px]">
+      <div className="flex gap-4 pl-1 py-1 pr-6 bg-[#262626] rounded-full items-center">
+        <div className="cursor-pointer h-[36px] aspect-square flex justify-center font-bold items-center text-[20px] text-primary-1 flex justify-center items-center rounded-full bg-secondary-2">
           B
         </div>
-        <div className="font-bold text-secondary-2 text-[16px] lg:text-[20px]">
+        <div className="font-bold text-secondary-4 text-[16px] lg:text-[20px]">
           BeatsByYehuda
         </div>
       </div>
@@ -33,13 +33,13 @@ const Nav = ({
         className="text-3xl md:hidden cursor-pointer flex flex-col justify-center items-center"
       >
         <span
-          className={`w-[28px] h-[2px] transition-all ease-in duration-500 bg-secondary-2 mb-[4px] rounded-[2px] ${isMenuOpen && "-rotate-45 translate-y-2"}`}
+          className={`w-[20px] h-[2px] transition-all ease-in duration-500 bg-secondary-4 mb-[4px] rounded-[2px] ${isMenuOpen && "-rotate-45 translate-y-2"}`}
         ></span>
         <span
-          className={`w-[28px] h-[2px] transition-all ease-in duration-500 bg-secondary-2 mb-[4px] rounded-[2px] ${isMenuOpen && "opacity-0"}`}
+          className={`w-[20px] h-[2px] transition-all ease-in duration-500 bg-secondary-4 mb-[4px] rounded-[2px] ${isMenuOpen && "opacity-0"}`}
         ></span>
         <span
-          className={`w-[28px] h-[2px] transition-all ease-in duration-500 bg-secondary-2 mb-[4px] rounded-[2px] ${isMenuOpen && "rotate-45 -translate-y-1"}`}
+          className={`w-[20px] h-[2px] transition-all ease-in duration-500 bg-secondary-4 mb-[4px] rounded-[2px] ${isMenuOpen && "rotate-45 -translate-y-1"}`}
         ></span>
       </div>
       <div
