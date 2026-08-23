@@ -295,7 +295,7 @@ const Main = () => {
 
           <div
             ref={item4.ref}
-            className={`w-full relative transition-all duration-700 ease-in ${item4.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center md:justify-end mt-[24px] md:mt-[32px] justify-center`}
+            className={`w-full relative transition-all duration-700 ease-in ${item4.isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"} flex items-center md:justify-end mt-[16px] md:mt-[32px] justify-center`}
           >
             <div className="text-2xl md:w-[65%] bg-[#262626] flex flex-col items-center justify-center relative overflow-hidden border  md:h-[220px] border-primary-5 sm:overflow-hidden md:h-[80%] 2xl w-full aspect-[8/5] text-white md:rounded-[16px] rounded-[12px]">
               <div className="absolute h-[102px] blur-[120px] md:h-[200px] md:w-[200px] -bottom-10 md:-bottom-20 -right-10 w-[118px] bg-gold-2/50 rounded-[120%]"></div>
@@ -348,7 +348,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="bg-primary-1 mt-[24px] md:mt-[32px] border-1 border-primary-3 md:w-fit px-[32px] md:px-[64px] mb-[64px] w-full flex flex-col justify-center items-center md:rounded-[16px] rounded-[12px] h-fit md:py-12 py-8">
+        <div className="bg-primary-1 mt-[24px] md:mt-[32px] border-1 border-primary-4 md:border-primary-3 md:w-fit px-[32px] md:px-[64px] mb-[64px] w-full flex flex-col justify-center items-center md:rounded-[16px] rounded-[12px] h-fit md:py-12 py-8">
           <div className="font-semibold text-[16px]">Follow me on Youtube</div>
 
           <Link

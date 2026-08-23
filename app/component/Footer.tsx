@@ -7,7 +7,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="flex px-[32px] md:h-[60px] relative left-[50%] mb-[32px] -translate-x-[50%] text-white/90 md:w-fit bg-secondary-2 rounded-[64px] md:rounded-[64px] w-fit h-[44px]">
-      <div className="text-xl items-center text-primary-2 md:px-[64px] md:gap-8 md:justify-between justify-center min-w-20 flex">
+      <div className="text-xl gap-6 items-center text-primary-2 md:px-[64px] md:gap-8 md:justify-between justify-center min-w-20 flex">
         <Link
           target="_blank"
           href="https://www.instagram.com/beatsbyehuda?igsh=MWhrdWpiYmQ1YnFzeg%3D%3D&utm_source=qr"
