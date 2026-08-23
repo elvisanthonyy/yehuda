@@ -140,7 +140,7 @@ const Main = () => {
       >
         <section
           ref={aboutRef}
-          className="flex bg-[#262626] md:bg-white/0 md:gap-[24px] px-4 py-4 md:p-0 rounded-[28px] md:items-center relative w-full md:flex-row sm:w-full info-animation md:mt-[120px] md:h-[350px] mt-[88px] flex-col shrink-0"
+          className="flex bg-[#333333] md:bg-white/0 md:gap-[24px] px-4 py-4 md:p-0 rounded-[28px] md:items-center relative w-full md:flex-row sm:w-full info-animation md:mt-[120px] md:h-[350px] mt-[88px] flex-col shrink-0"
         >
           <div className="flex aspect-[7/5] md:border md:border-primary-4 md:h-full h-auto overflow-hidden w-full md:top-0 md:right-0 justify-center items-center shrink-0 relative w-full md:w-[50%] md:w-[50%] rounded-xl text-white bg-linear-to-tr  border-black">
             <div className="flex w-full h-full pt-[48px] md:h-fit bg-red-300  rounded-[16px] justify-center md:pt-13 pt-4.5 overflow-hidden items-center relative h-auto bg-linear-to-b from-gold-3 to-gold-4">
@@ -154,7 +154,7 @@ const Main = () => {
               />
             </div>
           </div>
-          <div className="mt-[32px] md:w-[60%] md:justify-center md:border md:border-primary-4 bg-[#262626] md:h-full md:mt-0 md:px-[40px] rounded-[12px] md:order-1 flex flex-col w-full">
+          <div className="mt-[32px] md:w-[60%] md:justify-center md:border md:border-primary-5 bg-[#333333] md:h-full md:mt-0 md:px-[40px] rounded-[12px] md:order-1 flex flex-col w-full">
             <div className="flex flex-col gap-3">
               <div className="text-[24px] px-2 leading-[1.4] md:text-[28px] tracking-tight w-full md:w-full text-secondary-2 font-semibold">
                 <span className="text-secondary-5">

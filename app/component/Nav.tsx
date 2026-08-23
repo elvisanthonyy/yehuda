@@ -19,7 +19,7 @@ const Nav = ({
 
   return (
     <nav className="flex fixed md:border-b border-primary-4 md:px-[64px] xl:px-[168px] nav-animation bg-primary-2 text-xl justify-between items-center z-10 px-[20px] absolute top-0 left-0 w-full h-[76px] md:h-[80px]">
-      <div className="flex gap-4 pl-1 py-1 pr-6 bg-[#262626] rounded-full items-center">
+      <div className="flex gap-4 pl-1 py-1 pr-6 bg-[#333333] rounded-full items-center">
         <div className="cursor-pointer h-[36px] aspect-square flex justify-center font-bold items-center text-[20px] text-primary-1 flex justify-center items-center rounded-full bg-secondary-2">
           B
         </div>
