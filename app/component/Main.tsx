@@ -162,7 +162,7 @@ const Main = () => {
                 </span>
                 I'm BeatsByYehuda
               </div>
-              <div className="w-full rounded-[32px] bg-[#38372E] my-1 md:text-[16px] px-6 py-[8px] md:my-[12px] text-[14px] md:py-[8px] text-left border-primary-2 text-secondary-2">
+              <div className="w-full rounded-[32px] border border-primary-5 bg-[#38372E] my-1 md:text-[16px] px-6 py-[8px] md:my-[12px] text-[14px] md:py-[8px] text-left border-primary-2 text-secondary-2">
                 A Music Producer
               </div>
               <div className="flex gap-3 items-center">
