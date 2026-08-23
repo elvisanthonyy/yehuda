@@ -44,7 +44,7 @@ const Beats = ({ beat, setBeat, setIsMusicPlayerOpen }: ChildProps) => {
           </div>
         </div>
       </div>
-      <div className="md:text-[18px] mt-[8px] md:mt-[16px] mb-[8px] w-[90%] text-secondary-4 text-[14px] overflow-hidden h-[30px] whitespace-nowrap text-ellipsis border-yehuda-black/30 flex flex-nowrap items-end z-40">
+      <div className="md:text-[14px] mt-[8px] md:mt-[8px] mb-[8px] w-[90%] text-secondary-4 text-[14px] overflow-hidden h-[30px] whitespace-nowrap text-ellipsis border-yehuda-black/30 flex flex-nowrap items-end z-40">
         {beat.name}
       </div>
     </div>
